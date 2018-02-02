@@ -8,7 +8,7 @@
 
 using symbole_wojska_t = std::vector<std::vector<std::vector<char>>>;
 
-Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii, symbole_wojska_t wojska) :
+Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii,const symbole_wojska_t& wojska) :
     liczbaTur_(liczbaTur),
     poleBitwy_(dlugoscLinii),
     pierwszyGracz_(0, wojska.at(0), &poleBitwy_),

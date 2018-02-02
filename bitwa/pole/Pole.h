@@ -8,8 +8,7 @@
 #include <memory>
 
 class PoleBitwy;
-
-#include "../wojsko/oddzial/Oddzial.h"
+class Oddzial;
 
 class Pole {
 private:
@@ -26,7 +25,8 @@ public:
     std::shared_ptr<Oddzial> zwrocOddzial();
     void ustawOddzial(const std::shared_ptr<Oddzial>&);
     void usunOddzial();
-    virtual ~Pole() = default;
+    virtual ~Pole() = 0;
+
 
 };
 

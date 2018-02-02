@@ -18,7 +18,7 @@ private:
 
 public:
 
-    Gra(unsigned int liczbaTur, unsigned int dlugoscLinii, std::vector<std::vector<std::vector<char>>> wojska);
+    Gra(unsigned int liczbaTur, unsigned int dlugoscLinii,const std::vector<std::vector<std::vector<char>>>& wojska);
 
     bool czyKoniec();
 

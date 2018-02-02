@@ -26,3 +26,9 @@ void Pole::ustawWspolrzedne(uint8_t nrGracza, unsigned int nrWiersza, unsigned i
     nrKolumny_=nrKolumny;
 
 }
+
+
+Pole::~Pole() {
+
+}
+
