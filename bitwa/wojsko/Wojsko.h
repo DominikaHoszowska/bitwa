@@ -7,6 +7,8 @@
 
 #include <list>
 #include "../pole/PoleBitwy.h"
+#include "oddzial/Headers/Wsparcie.h"
+
 class Gracz;
 
 class Wojsko {
@@ -17,6 +19,11 @@ private:
 public:
     Wojsko(Gracz *gracz_,std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy);
     bool czyPuste();
+    void wyslijWsparcie();
+    void wykonajAtak();
+    void wycofajWsparcie();
+
+    Oddzial* wskazKogoWspierac(Wsparcie* wsparcie);
 
 };
 

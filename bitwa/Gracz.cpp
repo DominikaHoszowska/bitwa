@@ -13,15 +13,16 @@ Gracz::Gracz(const uint8_t numerGracza, std::vector<std::vector<char>> wojsko, P
 }
 
 void Gracz::wyslijWsparcie() {
-    //TODO
+    wojsko_.wyslijWsparcie();
+
 }
 
 void Gracz::wykonajAtak() {
-    //TODO
+    wojsko_.wykonajAtak();
 }
 
 void Gracz::wycofajWsparcie() {
-    //TODO
+    wojsko_.wycofajWsparcie();
 }
 
 void Gracz::zakonczTure() {

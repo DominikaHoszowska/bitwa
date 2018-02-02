@@ -4,10 +4,12 @@
 
 #include "Wojsko.h"
 #include "../Gracz.h"
+#include "oddzial/Headers/Oddzial.h"
 
 Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy) :
-        gracz_(gracz_),
-        poleBitwy_(poleBitwy)
+        poleBitwy_(poleBitwy),
+        gracz_(gracz_)
+
 {
 
     for (unsigned int nrWiersza = 0; nrWiersza < 3; nrWiersza++) {
@@ -47,4 +49,31 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
 bool Wojsko::czyPuste() {
 
     return (oddzialy_.empty());
+}
+
+void Wojsko::wyslijWsparcie() {
+for(std::shared_ptr<Oddzial> oddzial:oddzialy_)
+{
+    oddzial->wspieraj();
+}
+}
+
+void Wojsko::wykonajAtak() {
+    for(std::shared_ptr<Oddzial> oddzial:oddzialy_)
+    {
+        oddzial->atakuj();
+    }}
+
+void Wojsko::wycofajWsparcie() {
+    for(std::shared_ptr<Oddzial> oddzial:oddzialy_)
+    {
+        oddzial->wycofajWsparcie();
+    }
+}
+
+Oddzial *Wojsko::wskazKogoWspierac(Wsparcie *wsparcie) {
+
+    //TODO
+
+    return nullptr;
 }
