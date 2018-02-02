@@ -2,14 +2,13 @@
 // Created by Dominika on 02.02.2018.
 //
 
-#ifndef BITWA_TARCZOWNIK_H
-#define BITWA_TARCZOWNIK_H
+#ifndef BITWA_BEBNIARZ_H
+#define BITWA_BEBNIARZ_H
 
 
+#include "Zasiegowa.h"
 #include "Wsparcie.h"
-#include "Zwarcie.h"
-
-class Tarczownik: public Zwarcie, public Wsparcie{
+class Bebniarz: public Zasiegowa, public Wsparcie {
 public:
     double zmianaMorale() override;
 
@@ -17,4 +16,4 @@ public:
 };
 
 
-#endif //BITWA_TARCZOWNIK_H
+#endif //BITWA_BEBNIARZ_H

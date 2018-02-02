@@ -49,7 +49,9 @@ void Oddzial::setMorale(double morale_) {
     Oddzial::morale_ = morale_;
 }
 
-void Oddzial::dodajWspierajacego(Wsparcie *wsparcie) {
-    wsparcie_.push_back(wsparcie);
+void Oddzial::dodajWspierajacego(Wsparcie *wspierajacy) {
+    wsparcie_.push_back(wspierajacy);
+    morale_*=wspierajacy->zmianaMorale();
+    obrona_*=wspierajacy->zmianaObrona();
 }
 
