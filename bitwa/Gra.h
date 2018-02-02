@@ -10,10 +10,10 @@ private:
     unsigned int liczbaTur_;
     unsigned int numerTury_ = 0;
 
+    PoleBitwy poleBitwy_;
+
     Gracz pierwszyGracz_;
     Gracz drugiGracz_;
-
-    PoleBitwy poleBitwy_;
 
 
 public:

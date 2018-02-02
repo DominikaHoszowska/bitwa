@@ -14,6 +14,8 @@ Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii,const symbole_wojska_
     pierwszyGracz_(0, wojska.at(0), &poleBitwy_),
     drugiGracz_(1, wojska.at(1), &poleBitwy_)
 {
+
+
 }
 
 bool Gra::czyKoniec() {
