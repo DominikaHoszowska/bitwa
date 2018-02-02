@@ -18,14 +18,14 @@ private:
 
 public:
 
-    Gracz(uint8_t numerGracza, std::vector<std::vector<char>> wojsko, PoleBitwy& poleBitwy);
-
+    Gracz(uint8_t numerGracza, std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy);
 
     void wyslijWsparcie();
     void wykonajAtak();
     void wycofajWsparcie();
     void zakonczTure();
 
+    uint8_t zwrocIdentyfikator();
 
     ~Gracz() = default;
 };

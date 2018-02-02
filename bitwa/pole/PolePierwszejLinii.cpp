@@ -3,3 +3,7 @@
 //
 
 #include "PolePierwszejLinii.h"
+
+PolePierwszejLinii::PolePierwszejLinii(PoleBitwy *poleBitwy) : Pole(poleBitwy) {
+
+}

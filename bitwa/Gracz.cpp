@@ -5,7 +5,10 @@
 #include "Gracz.h"
 
 
-Gracz::Gracz(const uint8_t numerGracza, std::vector<std::vector<char>> wojsko, PoleBitwy &poleBitwy): numerGracza_(numerGracza) {
+Gracz::Gracz(const uint8_t numerGracza, std::vector<std::vector<char>> wojsko, PoleBitwy *poleBitwy):
+        numerGracza_(numerGracza),
+        wojsko_(this, wojsko, poleBitwy)
+{
     //TODO
 }
 
@@ -23,4 +26,8 @@ void Gracz::wycofajWsparcie() {
 
 void Gracz::zakonczTure() {
     //TODO
+}
+
+uint8_t Gracz::zwrocIdentyfikator() {
+    return numerGracza_;
 }
