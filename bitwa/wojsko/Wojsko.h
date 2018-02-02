@@ -16,6 +16,8 @@ private:
     Gracz* gracz_;
 public:
     Wojsko(Gracz *gracz_,std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy);
+    bool czyPuste();
+
 };
 
 

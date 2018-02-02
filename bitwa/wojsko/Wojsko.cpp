@@ -43,3 +43,8 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
     }
 
 }
+
+bool Wojsko::czyPuste() {
+
+    return (oddzialy_.empty());
+}

@@ -24,7 +24,7 @@ public:
     void wykonajAtak();
     void wycofajWsparcie();
     void zakonczTure();
-
+    bool czyPuste();
     uint8_t zwrocIdentyfikator();
 
     ~Gracz() = default;

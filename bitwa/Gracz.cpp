@@ -31,3 +31,7 @@ void Gracz::zakonczTure() {
 uint8_t Gracz::zwrocIdentyfikator() {
     return numerGracza_;
 }
+
+bool Gracz::czyPuste() {
+    return wojsko_.czyPuste();
+}

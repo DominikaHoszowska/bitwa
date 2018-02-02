@@ -3,6 +3,7 @@
 //
 
 #include <vector>
+#include <iostream>
 #include "Gra.h"
 
 
@@ -20,8 +21,21 @@ Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii,const symbole_wojska_
 
 bool Gra::czyKoniec() {
 
-    //TODO
-
+    if(pierwszyGracz_.czyPuste())
+    {
+        std::cout<<"Wygrał drugi gracz!!!";
+        return true;
+    }
+    if(drugiGracz_.czyPuste())
+    {
+        std::cout<<"Wygrał pierwszy gracz!!!";
+        return true;
+    }
+    if(nrTury_==liczbaTur_)
+    {
+        std::cout<<"REMIS";
+        return true;
+    }
     return false;
 
 }

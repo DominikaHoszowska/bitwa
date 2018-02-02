@@ -8,7 +8,7 @@
 class Gra {
 private:
     unsigned int liczbaTur_;
-    unsigned int numerTury_ = 0;
+    unsigned int nrTury_ = 0;
 
     PoleBitwy poleBitwy_;
 
