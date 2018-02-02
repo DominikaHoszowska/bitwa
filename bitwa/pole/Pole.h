@@ -29,7 +29,7 @@ public:
     void ustawOddzial(const std::shared_ptr<Oddzial>&);
     void usunOddzial();
     virtual ~Pole() = 0;
-    virtual std::shared_ptr<Oddzial> kogoWspierac(Wojsko *wojsko) = 0;
+    virtual std::shared_ptr<Oddzial> kogoWspierac(Wojsko *wojsko)=0;
 
 
     unsigned int getNrGracza_() const;

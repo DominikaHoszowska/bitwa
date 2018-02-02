@@ -53,3 +53,5 @@ std::shared_ptr<Oddzial> Pole::zwrocOddzial() {
     return oddzial_;
 }
 
+
+

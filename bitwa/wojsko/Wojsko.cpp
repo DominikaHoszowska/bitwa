@@ -79,19 +79,20 @@ Oddzial* Wojsko::wskazKogoWspierac(Wsparcie *wsparcie) {
 
 }
 
-std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(Pole& pole) {
-    return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_());
+std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(const Pole &pole ) {
+    return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_())->zwrocOddzial();
 }
 
-std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(PolePierwszejLinii &pole) {
+std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pole) {
     if(poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1)!= nullptr) {
-        return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1);
+        return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1)->zwrocOddzial();
     }
     if(poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() + 1)!= nullptr) {
-        return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() + 1);
+        return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() + 1)->zwrocOddzial();
     }
-    return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_());
-
+    return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_())->zwrocOddzial();
 
 }
+
+
 
