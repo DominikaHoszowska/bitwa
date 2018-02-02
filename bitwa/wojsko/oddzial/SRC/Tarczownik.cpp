@@ -11,3 +11,7 @@ double Tarczownik::zmianaMorale() {
 double Tarczownik::zmianaObrona() {
     return 1.5;
 }
+
+void Tarczownik::atakuj() {
+//nie atakuje
+}

@@ -9,7 +9,8 @@
 #include "Zwarcie.h"
 
 class Konny: public Zwarcie{
-
+public:
+    void atakuj() override;
 };
 
 

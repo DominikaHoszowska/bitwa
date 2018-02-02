@@ -10,9 +10,12 @@
 #include "Wsparcie.h"
 class Bebniarz: public Zasiegowa, public Wsparcie {
 public:
+    Bebniarz();
+    static const char OZNACZENIE ='B';
     double zmianaMorale() override;
-
     double zmianaObrona() override;
+
+    void atakuj() override;
 };
 
 

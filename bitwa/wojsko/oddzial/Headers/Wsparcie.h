@@ -12,6 +12,7 @@ public:
     void wspieraj() override;
     virtual double zmianaMorale()=0;
     virtual double zmianaObrona()=0;
+
 };
 
 

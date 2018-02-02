@@ -12,8 +12,9 @@
 class Tarczownik: public Zwarcie, public Wsparcie{
 public:
     double zmianaMorale() override;
-
     double zmianaObrona() override;
+
+    void atakuj() override;
 };
 
 

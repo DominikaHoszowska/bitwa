@@ -12,3 +12,4 @@ void Wsparcie::wspieraj() {
     oddzial->dodajWspierajacego(this);
 
 }
+

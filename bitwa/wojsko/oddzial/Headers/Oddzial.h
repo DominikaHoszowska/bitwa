@@ -31,7 +31,7 @@ protected:
 
 public:
     virtual void wspieraj();
-    virtual void atakuj();
+    virtual void atakuj()=0;
     virtual void wycofajWsparcie();
 
     Pole *getPole() const;
@@ -46,9 +46,31 @@ public:
     double getMorale() const;
     void setMorale(double morale_);
 
+    int getSilaAtaku_() const;
+
+    void setSilaAtaku_(int silaAtaku_);
+
+    double getObrona_() const;
+
+    void setObrona_(double obrona_);
+
+    int getWytrzymalosc_() const;
+
+    void setWytrzymalosc_(int wytrzymalosc_);
+
+    int getLiczebnoscOddzialu_() const;
+
+    void setLiczebnoscOddzialu_(int liczebnoscOddzialu_);
+
+    int getLiczebnoscPoczatkowa() const;
+
+    void setLiczebnoscPoczatkowa(int liczebnoscPoczatkowa);
+
+    int getZasieg_() const;
+
+    void setZasieg_(int zasieg_);
 
     void dodajWspierajacego(Wsparcie* wsparcie);
-
 };
 
 
