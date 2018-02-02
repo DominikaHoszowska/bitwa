@@ -11,6 +11,8 @@ class PolePierwszejLinii
         : public Pole {
 public:
     explicit PolePierwszejLinii(PoleBitwy *poleBitwy);
+
+    std::shared_ptr<Oddzial> kogoWspierac(Wojsko *wojsko) override;
 };
 
 

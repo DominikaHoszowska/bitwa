@@ -71,9 +71,27 @@ void Wojsko::wycofajWsparcie() {
     }
 }
 
-Oddzial *Wojsko::wskazKogoWspierac(Wsparcie *wsparcie) {
+Oddzial* Wojsko::wskazKogoWspierac(Wsparcie *wsparcie) {
 
-    //TODO
+     auto pole = wsparcie->getPole();
 
-    return nullptr;
+    return (pole->kogoWspierac(this)).get();
+
 }
+
+std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(Pole& pole) {
+    return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_());
+}
+
+std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(PolePierwszejLinii &pole) {
+    if(poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1)!= nullptr) {
+        return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1);
+    }
+    if(poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() + 1)!= nullptr) {
+        return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() + 1);
+    }
+    return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_());
+
+
+}
+

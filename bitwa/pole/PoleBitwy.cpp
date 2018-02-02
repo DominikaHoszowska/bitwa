@@ -27,3 +27,7 @@ PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):
 void PoleBitwy::ustawOddzial(uint8_t nrGracza, int nrWiersza, int nrKolumny, std::shared_ptr<Oddzial> oddzial) {
     poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->ustawOddzial(oddzial);
 }
+
+std::shared_ptr<Pole> PoleBitwy::zwrocPole(uint8_t nrGracza, int nrWiersza, int nrKolumny) {
+    return poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny);
+}

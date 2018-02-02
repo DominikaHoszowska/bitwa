@@ -3,14 +3,15 @@
 //
 
 #include "Pole.h"
+#include "../wojsko/oddzial/Headers/Oddzial.h"
+#include "../wojsko/Wojsko.h"
+
 
 Pole::Pole(PoleBitwy *poleBitwy): poleBitwy_(poleBitwy) {
 
 }
 
-std::shared_ptr<Oddzial> Pole::zwrocOddzial() {
-    return oddzial_;
-}
+
 
 void Pole::ustawOddzial(const std::shared_ptr<Oddzial>& oddzial) {
     oddzial_= oddzial;
@@ -30,5 +31,25 @@ void Pole::ustawWspolrzedne(uint8_t nrGracza, unsigned int nrWiersza, unsigned i
 
 Pole::~Pole() {
 
+}
+
+const std::shared_ptr<Oddzial> &Pole::getOddzial() const {
+    return oddzial_;
+}
+
+unsigned int Pole::getNrGracza_() const {
+    return nrGracza_;
+}
+
+unsigned int Pole::getNrWiersza_() const {
+    return nrWiersza_;
+}
+
+unsigned int Pole::getNrKolumny_() const {
+    return nrKolumny_;
+}
+
+std::shared_ptr<Oddzial> Pole::zwrocOddzial() {
+    return oddzial_;
 }
 

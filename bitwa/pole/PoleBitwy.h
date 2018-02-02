@@ -20,6 +20,7 @@ public:
     void ustawOddzial(uint8_t gracz, int nrWiersza, int nrKolumny, std::shared_ptr<Oddzial>);
 
     virtual ~PoleBitwy() = default;
+    std::shared_ptr<Pole> zwrocPole(uint8_t gracz, int nrWiersza, int nrKolumny);
 };
 
 

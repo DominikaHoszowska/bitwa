@@ -25,6 +25,8 @@ public:
 
     Oddzial* wskazKogoWspierac(Wsparcie* wsparcie);
 
+    std::shared_ptr<Oddzial> wskazKogoWspierac(const PolePierwszejLinii&);
+    std::shared_ptr<Oddzial> wskazKogoWspierac(const Pole&);
 };
 
 

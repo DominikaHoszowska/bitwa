@@ -52,3 +52,4 @@ void Oddzial::setMorale(double morale_) {
 void Oddzial::dodajWspierajacego(Wsparcie *wsparcie) {
     wsparcie_.push_back(wsparcie);
 }
+

@@ -7,6 +7,7 @@
 
 #include <memory>
 
+class Wojsko;
 class PoleBitwy;
 class Oddzial;
 
@@ -22,11 +23,20 @@ public:
 
     explicit Pole(PoleBitwy *poleBitwy);
     void ustawWspolrzedne(uint8_t ,unsigned int,unsigned int);
+
+    const std::shared_ptr<Oddzial> &getOddzial() const;
     std::shared_ptr<Oddzial> zwrocOddzial();
     void ustawOddzial(const std::shared_ptr<Oddzial>&);
     void usunOddzial();
     virtual ~Pole() = 0;
+    virtual std::shared_ptr<Oddzial> kogoWspierac(Wojsko *wojsko) = 0;
 
+
+    unsigned int getNrGracza_() const;
+
+    unsigned int getNrWiersza_() const;
+
+    unsigned int getNrKolumny_() const;
 
 };
 
