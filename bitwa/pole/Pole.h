@@ -37,7 +37,7 @@ public:
     unsigned int getNrWiersza_() const;
 
     unsigned int getNrKolumny_() const;
-
+    virtual void czyMogeAtakowac(Oddzial*);
 };
 
 

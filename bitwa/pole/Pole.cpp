@@ -53,5 +53,9 @@ std::shared_ptr<Oddzial> Pole::zwrocOddzial() {
     return oddzial_;
 }
 
+void Pole::czyMogeAtakowac(Oddzial *) {
+
+}
+
 
 

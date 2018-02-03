@@ -12,3 +12,7 @@ PolePierwszejLinii::PolePierwszejLinii(PoleBitwy *poleBitwy) : Pole(poleBitwy) {
 std::shared_ptr<Oddzial> PolePierwszejLinii::kogoWspierac(Wojsko *wojsko) {
     return wojsko->wskazKogoWspierac(*this);
 }
+
+void PolePierwszejLinii::czyMogeAtakowac(Oddzial *oddzial) {
+    oddzial->atakuj(this);
+}

@@ -13,3 +13,7 @@ PoleDrugiejLinii::PoleDrugiejLinii(PoleBitwy *poleBitwy) : Pole(poleBitwy) {
 std::shared_ptr<Oddzial> PoleDrugiejLinii::kogoWspierac(Wojsko *wojsko) {
     return wojsko->wskazKogoWspierac(*this);
 }
+
+void PoleDrugiejLinii::czyMogeAtakowac(Oddzial *oddzial) {
+    oddzial->atakuj(*this);
+}

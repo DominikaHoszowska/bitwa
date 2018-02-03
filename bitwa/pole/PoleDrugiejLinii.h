@@ -12,6 +12,8 @@ public:
     explicit PoleDrugiejLinii(PoleBitwy *poleBitwy);
 
     std::shared_ptr<Oddzial> kogoWspierac(Wojsko *wojsko) override;
+
+    void czyMogeAtakowac(Oddzial *oddzial) override;
 };
 
 
