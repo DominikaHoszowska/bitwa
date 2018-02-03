@@ -14,6 +14,7 @@ Halabardzista::Halabardzista():Oddzial(),Zwarcie() {
 }
 
 void Halabardzista::atakuj(PolePierwszejLinii pole) {
+    //TODO
 
 }
 

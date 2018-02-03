@@ -13,6 +13,9 @@ public:
     Kusznik();
     static const char OZNACZENIE= 'k';
 
+    void atakuj(PolePierwszejLinii linii) override;
+
+    void atakuj(PoleDrugiejLinii linii) override;
 };
 
 

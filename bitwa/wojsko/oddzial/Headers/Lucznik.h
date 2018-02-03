@@ -13,6 +13,10 @@ public:
     Lucznik();
     static const char OZNACZENIE = 'L';
 
+    void atakuj(PolePierwszejLinii linii) override;
+
+    void atakuj(PoleDrugiejLinii linii) override;
+
 };
 
 

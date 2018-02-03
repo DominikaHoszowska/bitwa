@@ -8,6 +8,7 @@
 #include <list>
 #include "../pole/PoleBitwy.h"
 #include "oddzial/Headers/Wsparcie.h"
+#include "oddzial/Headers/Lucznik.h"
 
 class Gracz;
 
@@ -24,9 +25,11 @@ public:
     void wycofajWsparcie();
 
     Oddzial* wskazKogoWspierac(Wsparcie* wsparcie);
-
     std::shared_ptr<Oddzial> wskazKogoWspierac(const PolePierwszejLinii&);
     std::shared_ptr<Oddzial> wskazKogoWspierac(const Pole&);
+    virtual Oddzial* znajdzPrzeciwnika(Oddzial);
+    virtual Oddzial* znajdzPrzeciwnika(Lucznik);
+
 };
 
 

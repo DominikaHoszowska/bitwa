@@ -14,3 +14,8 @@ Konny::Konny(): Oddzial(),Zwarcie(){
     zasieg_=2;
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
+
+void Konny::atakuj(PolePierwszejLinii linii) {
+    //TODO
+
+}

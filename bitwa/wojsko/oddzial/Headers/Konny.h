@@ -13,6 +13,7 @@ public:
     Konny();
     static const char OZNACZENIE= 'K';
 
+    void atakuj(PolePierwszejLinii linii) override;
 };
 
 

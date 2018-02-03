@@ -100,5 +100,17 @@ std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pol
 
 }
 
+Oddzial *Wojsko::znajdzPrzeciwnika(Oddzial) {
+    //TODO
+    return nullptr;
+
+}
+
+Oddzial *Wojsko::znajdzPrzeciwnika(Lucznik) {
+    //TODO
+
+    return nullptr;
+}
+
 
 

@@ -13,3 +13,12 @@ Kusznik::Kusznik(): Oddzial(),Zasiegowa(){
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 
+void Kusznik::atakuj(PolePierwszejLinii linii) {
+    //TODO
+
+}
+
+void Kusznik::atakuj(PoleDrugiejLinii linii) {
+    //TODO
+}
+
