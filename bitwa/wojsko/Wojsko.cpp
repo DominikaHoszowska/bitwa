@@ -5,6 +5,7 @@
 #include "Wojsko.h"
 #include "../Gracz.h"
 #include "oddzial/Headers/Oddzial.h"
+#include "oddzial/Headers/Tarczownik.h"
 
 Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy) :
         poleBitwy_(poleBitwy),
@@ -16,9 +17,9 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
         for(unsigned int nrKolumny=0;nrKolumny<wojsko.at(nrWiersza).size();nrKolumny++) {
             std::shared_ptr<Oddzial> oddzial;
             switch (wojsko.at(nrWiersza).at(nrKolumny)) {
-//                case Tarczownik::OZNACZENIE:
-//                    oddzial = new Tarczownik();
-//                    break;
+                case Tarczownik::OZNACZENIE:
+                    oddzial = std::make_shared<Tarczownik>();
+                    break;
 //                case Lucznik::OZNACZENIE:
 //                    oddzial=new Lucznik();
 //                    break;
