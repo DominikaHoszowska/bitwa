@@ -117,3 +117,7 @@ void Oddzial::atakuj(PoleDrugiejLinii) {
 
 }
 
+void Oddzial::przyjmijAtak(double obrazenia) {
+//TODO
+}
+

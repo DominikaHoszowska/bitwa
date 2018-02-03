@@ -38,6 +38,7 @@ public:
     virtual void wspieraj();
     virtual void atakuj();
     virtual void wycofajWsparcie();
+    virtual void przyjmijAtak(double);
 
     Pole *getPole() const;
     void setPole(Pole *pole_);

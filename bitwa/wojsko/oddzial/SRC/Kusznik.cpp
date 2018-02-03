@@ -3,6 +3,7 @@
 //
 
 #include "../Headers/Kusznik.h"
+#include "../../Wojsko.h"
 
 Kusznik::Kusznik(): Oddzial(),Zasiegowa(){
     silaAtaku_=50;
@@ -14,8 +15,11 @@ Kusznik::Kusznik(): Oddzial(),Zasiegowa(){
 }
 
 void Kusznik::atakuj(PolePierwszejLinii linii) {
-    //TODO
-
+    Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
+    if(przeciwnik!= nullptr)
+    {
+        przeciwnik->przyjmijAtak((1+getSilaAtaku_())*getLiczebnoscOddzialu_());
+    }
 }
 
 void Kusznik::atakuj(PoleDrugiejLinii linii) {

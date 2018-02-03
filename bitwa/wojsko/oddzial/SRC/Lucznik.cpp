@@ -3,6 +3,7 @@
 //
 
 #include "../Headers/Lucznik.h"
+#include "../../Wojsko.h"
 Lucznik::Lucznik() :Oddzial(), Zasiegowa()
 {
     silaAtaku_=30;
@@ -12,13 +13,18 @@ Lucznik::Lucznik() :Oddzial(), Zasiegowa()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=5;
 }
-
 void Lucznik::atakuj(PolePierwszejLinii linii) {
-//    Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
-
-    //TODO
+    Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
+    if(przeciwnik!= nullptr)
+    {
+        przeciwnik->przyjmijAtak((1+getSilaAtaku_())*getLiczebnoscOddzialu_());
+    }
 }
 
 void Lucznik::atakuj(PoleDrugiejLinii linii) {
-    //TODO
+    Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
+    if(przeciwnik!= nullptr)
+    {
+        przeciwnik->przyjmijAtak((1+(getSilaAtaku_()*0.5))*getLiczebnoscOddzialu_());
+    }
 }

@@ -3,6 +3,7 @@
 //
 
 #include "../Headers/Miecznik.h"
+#include "../../Wojsko.h"
 
 Miecznik::Miecznik(): Oddzial(), Zwarcie()
 {
@@ -15,8 +16,12 @@ Miecznik::Miecznik(): Oddzial(), Zwarcie()
 }
 
 void Miecznik::atakuj(PolePierwszejLinii linii) {
-    //TODO
 
+    Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
+    if(przeciwnik!= nullptr)
+    {
+        przeciwnik->przyjmijAtak((1+getSilaAtaku_())*getLiczebnoscOddzialu_());
+    }
 }
 
 
