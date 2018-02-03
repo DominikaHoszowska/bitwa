@@ -13,6 +13,8 @@ class Wsparcie;
 
 
 class Oddzial {
+public:
+    Oddzial();
 
 private:
     Pole* pole_;

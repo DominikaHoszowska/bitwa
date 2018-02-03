@@ -9,6 +9,9 @@
 #include "Zwarcie.h"
 
 class Miecznik: public Zwarcie {
+public:
+    Miecznik();
+    static const char OZNACZENIE = 'M';
 
 };
 

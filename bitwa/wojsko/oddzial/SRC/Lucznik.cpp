@@ -2,14 +2,13 @@
 // Created by Dominika on 02.02.2018.
 //
 
-#include "../Headers/Miecznik.h"
-
-Miecznik::Miecznik(): Oddzial(), Zwarcie()
+#include "../Headers/Lucznik.h"
+Lucznik::Lucznik() :Oddzial(), Zasiegowa()
 {
     silaAtaku_=30;
-    obrona_=20;
+    obrona_=5;
     wytrzymalosc_=50;
     liczebnoscOddzialu_=200;
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
-    zasieg_=1;
+    zasieg_=5;
 }

@@ -101,3 +101,7 @@ void Oddzial::setZasieg_(int zasieg_) {
     Oddzial::zasieg_ = zasieg_;
 }
 
+Oddzial::Oddzial(){
+    morale_=0;
+}
+

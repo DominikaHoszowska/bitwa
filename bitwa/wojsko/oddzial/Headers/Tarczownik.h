@@ -11,6 +11,9 @@
 
 class Tarczownik: public Zwarcie, public Wsparcie{
 public:
+    Tarczownik();
+    static const char OZNACZENIE = 'T';
+
     double zmianaMorale() override;
     double zmianaObrona() override;
 

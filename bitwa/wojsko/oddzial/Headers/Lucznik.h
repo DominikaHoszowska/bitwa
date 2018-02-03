@@ -6,9 +6,12 @@
 #define BITWA_LUCZNIK_H
 
 
-#include "Headers/Zasiegowa.h"
+#include "Zasiegowa.h"
 
 class Lucznik: public Zasiegowa{
+public:
+    Lucznik();
+    static const char OZNACZENIE = 'L';
 
 };
 

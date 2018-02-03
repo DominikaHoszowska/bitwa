@@ -6,7 +6,7 @@
 #define BITWA_ZWARCIE_H
 
 
-class Zwarcie: public Oddzial{
+class Zwarcie: virtual public Oddzial{
 
 };
 

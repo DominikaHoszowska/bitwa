@@ -9,6 +9,9 @@
 #include "Zasiegowa.h"
 
 class Kusznik: public Zasiegowa {
+public:
+    Kusznik();
+    static const char OZNACZENIE= 'k';
 
 };
 

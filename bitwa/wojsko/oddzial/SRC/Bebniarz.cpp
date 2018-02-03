@@ -4,6 +4,7 @@
 
 #include "../Headers/Bebniarz.h"
 #include "../Headers/Oddzial.h"
+
 double Bebniarz::zmianaMorale() {
     return  1.5;
 }
@@ -16,7 +17,11 @@ void Bebniarz::atakuj() {
 //nie atakuje
 }
 
-Bebniarz::Bebniarz()
-{
-
+Bebniarz::Bebniarz(): Oddzial(),Zasiegowa(),Wsparcie(){
+    silaAtaku_=40;
+    obrona_=20;
+    wytrzymalosc_=40;
+    liczebnoscOddzialu_=150;
+    zasieg_=2;
+    liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }

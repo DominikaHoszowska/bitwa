@@ -8,7 +8,7 @@
 
 #include "Oddzial.h"
 
-class Zasiegowa: public Oddzial{
+class Zasiegowa: virtual public Oddzial{
 
 };
 

@@ -4,7 +4,7 @@
 
 #include "../Headers/Halabardzista.h"
 
-Halabardzista::Halabardzista() {
+Halabardzista::Halabardzista():Oddzial(),Zwarcie() {
     silaAtaku_=40;
     obrona_=20;
     wytrzymalosc_=40;

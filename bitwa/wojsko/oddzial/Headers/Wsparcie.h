@@ -7,7 +7,7 @@
 
 #include "Oddzial.h"
 
-class Wsparcie: public Oddzial{
+class Wsparcie: virtual public Oddzial{
 public:
     void wspieraj() override;
     virtual double zmianaMorale()=0;
