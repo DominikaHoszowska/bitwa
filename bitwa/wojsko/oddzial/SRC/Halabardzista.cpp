@@ -13,3 +13,7 @@ Halabardzista::Halabardzista():Oddzial(),Zwarcie() {
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 
+void Halabardzista::atakuj(PolePierwszejLinii pole) {
+
+}
+

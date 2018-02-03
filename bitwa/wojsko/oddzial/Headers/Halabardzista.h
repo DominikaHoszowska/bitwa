@@ -13,6 +13,7 @@ public:
     Halabardzista();
     static const char OZNACZENIE = 'H';
 
+    void atakuj(PolePierwszejLinii linii) override;
 };
 
 
