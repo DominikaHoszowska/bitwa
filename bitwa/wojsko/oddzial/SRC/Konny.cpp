@@ -19,3 +19,13 @@ void Konny::atakuj(PolePierwszejLinii linii) {
     //TODO
 
 }
+
+void Konny::przyjmijAtak(double obrazenia) {
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }
+}

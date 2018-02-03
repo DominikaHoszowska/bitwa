@@ -24,4 +24,15 @@ void Miecznik::atakuj(PolePierwszejLinii linii) {
     }
 }
 
+void Miecznik::przyjmijAtak(double obrazenia) {
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }
+
+}
+
 

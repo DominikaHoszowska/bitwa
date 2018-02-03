@@ -3,7 +3,7 @@
 //
 
 #include "../Headers/Halabardzista.h"
-
+#include "../../Wojsko.h"
 Halabardzista::Halabardzista():Oddzial(),Zwarcie() {
     silaAtaku_=40;
     obrona_=20;
@@ -14,7 +14,11 @@ Halabardzista::Halabardzista():Oddzial(),Zwarcie() {
 }
 
 void Halabardzista::atakuj(PolePierwszejLinii pole) {
-    //TODO
-
+    Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
+    if(przeciwnik!= nullptr)
+    {
+//        przeciwnik->przyjmijAtak(*this);
+//        TODO
+    }
 }
 

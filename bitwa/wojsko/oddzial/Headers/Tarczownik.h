@@ -18,6 +18,8 @@ public:
     double zmianaObrona() override;
 
     void atakuj() override;
+
+    void przyjmijAtak(double d) override;
 };
 
 

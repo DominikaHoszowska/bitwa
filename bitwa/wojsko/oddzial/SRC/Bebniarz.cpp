@@ -25,3 +25,12 @@ Bebniarz::Bebniarz(): Oddzial(),Zasiegowa(),Wsparcie(){
     zasieg_=2;
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
+
+void Bebniarz::przyjmijAtak(double obrazenia) {
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }}

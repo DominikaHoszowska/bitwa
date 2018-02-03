@@ -14,6 +14,8 @@ public:
     static const char OZNACZENIE = 'M';
 
     void atakuj(PolePierwszejLinii linii) override;
+
+    void przyjmijAtak(double d) override;
 };
 
 

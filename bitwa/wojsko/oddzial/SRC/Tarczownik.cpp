@@ -25,3 +25,13 @@ Tarczownik::Tarczownik(): Oddzial(),Zwarcie(),Wsparcie()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=2;
 }
+
+void Tarczownik::przyjmijAtak(double obrazenia) {
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }
+}
