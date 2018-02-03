@@ -6,6 +6,11 @@
 #include "../Gracz.h"
 #include "oddzial/Headers/Oddzial.h"
 #include "oddzial/Headers/Tarczownik.h"
+#include "oddzial/Headers/Lucznik.h"
+#include "oddzial/Headers/Kusznik.h"
+#include "oddzial/Headers/Halabardzista.h"
+#include "oddzial/Headers/Konny.h"
+#include "oddzial/Headers/Bebniarz.h"
 
 Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy) :
         poleBitwy_(poleBitwy),
@@ -20,21 +25,21 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
                 case Tarczownik::OZNACZENIE:
                     oddzial = std::make_shared<Tarczownik>();
                     break;
-//                case Lucznik::OZNACZENIE:
-//                    oddzial=new Lucznik();
-//                    break;
-//                case Kusznik::OZNACZENIE:
-//                    oddzial=new Kusznik();
-//                    break;
-//                case Halabardzista::OZNACZENIE:
-//                    oddzial= new Halabardzista();
-//                    break;
-//                case Konny::OZNACZENIE:
-//                    oddzial=new Konny();
-//                    break;
-//                case Bebniarz::OZNACZENIE:
-//                    oddzial = new Bebniarz();
-//                    break;
+                case Lucznik::OZNACZENIE:
+                    oddzial=std::make_shared<Lucznik>();
+                    break;
+                case Kusznik::OZNACZENIE:
+                    oddzial=std::make_shared<Kusznik>();
+                    break;
+                case Halabardzista::OZNACZENIE:
+                    oddzial= std::make_shared<Halabardzista>();
+                    break;
+                case Konny::OZNACZENIE:
+                    oddzial=std::make_shared<Konny>();
+                    break;
+                case Bebniarz::OZNACZENIE:
+                    oddzial = std::make_shared<Bebniarz>();
+                    break;
                 case 'X':
                     break;
                 default:
