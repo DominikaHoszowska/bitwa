@@ -40,7 +40,7 @@ int main() {
 //    }
 
     /*Wczytanie wojsk*/
-    std::vector<std::vector<std::vector<char>>> tabPole /*(6)*/ = {{{'L', 'X'},{'X', 'X'},{'X', 'X'}},{{'X', 'X'},{'X', 'X'},{'X', 'X'}}};
+    std::vector<std::vector<std::vector<char>>> tabPole /*(6)*/ = {{{'X', 'X'},{'X', 'X'},{'X', 'X'}},{{'X', 'X'},{'X', 'X'},{'X', 'X'}}};
 //    char znak;
 //    std::cout<<"Wprowadz wojska";
 //  for(int nrWiersza=2;nrWiersza>=0;nrWiersza--)

@@ -13,3 +13,7 @@ Miecznik::Miecznik(): Oddzial(), Zwarcie()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=1;
 }
+
+void Miecznik::atakuj() {
+    //TODO
+}

@@ -12,3 +12,7 @@ Halabardzista::Halabardzista():Oddzial(),Zwarcie() {
     zasieg_=2;
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
+
+void Halabardzista::atakuj() {
+    //TODO
+}

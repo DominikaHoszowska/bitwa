@@ -13,6 +13,7 @@ public:
     Lucznik();
     static const char OZNACZENIE = 'L';
 
+    void atakuj() override;
 };
 
 

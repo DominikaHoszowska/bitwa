@@ -105,3 +105,7 @@ Oddzial::Oddzial(){
     morale_=0;
 }
 
+void Oddzial::atakuj() {
+
+}
+

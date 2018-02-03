@@ -12,3 +12,7 @@ Lucznik::Lucznik() :Oddzial(), Zasiegowa()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=5;
 }
+
+void Lucznik::atakuj() {
+    //TODO
+}

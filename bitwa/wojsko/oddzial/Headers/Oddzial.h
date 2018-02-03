@@ -33,7 +33,7 @@ protected:
 
 public:
     virtual void wspieraj();
-    virtual void atakuj()=0;
+    virtual void atakuj();
     virtual void wycofajWsparcie();
 
     Pole *getPole() const;

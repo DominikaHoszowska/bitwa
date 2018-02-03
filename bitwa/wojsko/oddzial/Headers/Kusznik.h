@@ -13,6 +13,7 @@ public:
     Kusznik();
     static const char OZNACZENIE= 'k';
 
+    void atakuj() override;
 };
 
 
