@@ -26,3 +26,8 @@ void Kusznik::atakuj(PoleDrugiejLinii linii) {
     //TODO
 }
 
+void Kusznik::przyjmijAtak(double obrazenia) {
+    //TODO
+
+}
+

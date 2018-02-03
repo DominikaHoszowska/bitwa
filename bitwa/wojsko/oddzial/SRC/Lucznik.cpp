@@ -28,3 +28,7 @@ void Lucznik::atakuj(PoleDrugiejLinii linii) {
         przeciwnik->przyjmijAtak((1+(getSilaAtaku_()*0.5))*getLiczebnoscOddzialu_());
     }
 }
+
+void Lucznik::przyjmijAtak(double obrazenia) {
+    //TODO
+}

@@ -16,6 +16,8 @@ public:
     void atakuj(PolePierwszejLinii linii) override;
 
     void atakuj(PoleDrugiejLinii linii) override;
+
+    void przyjmijAtak(double obrazenia) override;
 };
 
 
