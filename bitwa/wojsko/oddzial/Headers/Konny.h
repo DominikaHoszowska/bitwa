@@ -13,7 +13,6 @@ public:
     Konny();
     static const char OZNACZENIE= 'K';
 
-    void atakuj() override;
 };
 
 

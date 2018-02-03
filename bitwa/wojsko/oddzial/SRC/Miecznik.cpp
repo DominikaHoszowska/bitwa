@@ -14,6 +14,3 @@ Miecznik::Miecznik(): Oddzial(), Zwarcie()
     zasieg_=1;
 }
 
-void Miecznik::atakuj() {
-    //TODO
-}

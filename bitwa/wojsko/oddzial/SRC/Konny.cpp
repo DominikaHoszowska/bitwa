@@ -4,9 +4,7 @@
 
 #include "../Headers/Konny.h"
 
-void Konny::atakuj() {
-//TODO
-}
+
 
 Konny::Konny(): Oddzial(),Zwarcie(){
     silaAtaku_=50;

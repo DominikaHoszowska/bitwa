@@ -13,7 +13,6 @@ public:
     Miecznik();
     static const char OZNACZENIE = 'M';
 
-    void atakuj() override;
 };
 
 

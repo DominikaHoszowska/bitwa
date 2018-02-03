@@ -106,6 +106,14 @@ Oddzial::Oddzial(){
 }
 
 void Oddzial::atakuj() {
+    getPole()->czyMogeAtakowac(this);
+}
+
+void Oddzial::atakuj(PolePierwszejLinii) {
+
+}
+
+void Oddzial::atakuj(PoleDrugiejLinii) {
 
 }
 

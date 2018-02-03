@@ -5,6 +5,7 @@
 #include "PolePierwszejLinii.h"
 #include "../wojsko/oddzial/Headers/Oddzial.h"
 #include "../wojsko/Wojsko.h"
+
 PolePierwszejLinii::PolePierwszejLinii(PoleBitwy *poleBitwy) : Pole(poleBitwy) {
 
 }
@@ -14,5 +15,5 @@ std::shared_ptr<Oddzial> PolePierwszejLinii::kogoWspierac(Wojsko *wojsko) {
 }
 
 void PolePierwszejLinii::czyMogeAtakowac(Oddzial *oddzial) {
-    oddzial->atakuj(this);
+    oddzial->atakuj(*this);
 }

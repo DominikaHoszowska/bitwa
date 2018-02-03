@@ -7,6 +7,9 @@
 
 
 #include <list>
+#include "../../../pole/PolePierwszejLinii.h"
+#include "../../../pole/PoleDrugiejLinii.h"
+
 class Pole;
 class Wojsko;
 class Wsparcie;
@@ -73,6 +76,8 @@ public:
     void setZasieg_(int zasieg_);
 
     void dodajWspierajacego(Wsparcie* wsparcie);
+    virtual void atakuj(PolePierwszejLinii);
+    virtual void atakuj(PoleDrugiejLinii);
 };
 
 

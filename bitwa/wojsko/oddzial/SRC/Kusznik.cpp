@@ -13,6 +13,3 @@ Kusznik::Kusznik(): Oddzial(),Zasiegowa(){
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 
-void Kusznik::atakuj() {
-    //TODO
-}
