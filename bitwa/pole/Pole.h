@@ -38,6 +38,7 @@ public:
 
     unsigned int getNrKolumny_() const;
     virtual void czyMogeAtakowac(Oddzial*);
+    void wypisz();
 };
 
 

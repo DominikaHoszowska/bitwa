@@ -2,6 +2,7 @@
 // Created by Dominika on 02.02.2018.
 //
 
+#include <iostream>
 #include "../Headers/Bebniarz.h"
 #include "../Headers/Oddzial.h"
 
@@ -34,3 +35,8 @@ void Bebniarz::przyjmijAtak(double obrazenia) {
         straty+=getStraty();
         setStraty(straty);
     }}
+
+void Bebniarz::wypisz() {
+    std::cout<<this->OZNACZENIE;
+    wypiszLiczebnosc();
+}

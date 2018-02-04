@@ -15,8 +15,8 @@ Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii,const symbole_wojska_
     pierwszyGracz_(0, wojska.at(0), &poleBitwy_),
     drugiGracz_(1, wojska.at(1), &poleBitwy_)
 {
-
-
+    dlugoscLinii_=dlugoscLinii;
+    poleBitwy_.setGra(this);
 }
 
 bool Gra::czyKoniec() {
@@ -41,7 +41,7 @@ bool Gra::czyKoniec() {
 }
 
 void Gra::rozegrajTure() {
-
+    nrTury_+=1;
     pierwszyGracz_.wyslijWsparcie();
     drugiGracz_.wyslijWsparcie();
 
@@ -53,6 +53,27 @@ void Gra::rozegrajTure() {
 
     pierwszyGracz_.zakonczTure();
     drugiGracz_.zakonczTure();
+    wypisz();
 
 }
 
+void Gra::wypisz() {//TODO wypisywanie w przypadku X
+    wypiszPrzerywnik();
+    wypiszPrzerywnik();
+    std::cout<<"Tura "<<this->nrTury_<<" z "<<liczbaTur_<<std::endl;
+    this->poleBitwy_.wypisz();
+    wypiszPrzerywnik();
+
+}
+
+void Gra::wypiszPrzerywnik()
+{
+
+    for (unsigned int a=0;a<5*(this->dlugoscLinii_)+12;a++)
+        std::cout<<'-';
+    std::cout<<std::endl;
+}
+
+unsigned int Gra::getDlugoscLinii() const {
+    return dlugoscLinii_;
+}

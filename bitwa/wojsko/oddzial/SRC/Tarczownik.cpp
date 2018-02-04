@@ -2,6 +2,7 @@
 // Created by Dominika on 02.02.2018.
 //
 
+#include <iostream>
 #include "../Headers/Tarczownik.h"
 
 double Tarczownik::zmianaMorale() {
@@ -34,4 +35,10 @@ void Tarczownik::przyjmijAtak(double obrazenia) {
         straty+=getStraty();
         setStraty(straty);
     }
+}
+
+void Tarczownik::wypisz() {
+
+    std::cout<<this->OZNACZENIE;
+    wypiszLiczebnosc();
 }

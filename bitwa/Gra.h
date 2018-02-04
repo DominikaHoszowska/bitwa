@@ -9,9 +9,8 @@ class Gra {
 private:
     unsigned int liczbaTur_;
     unsigned int nrTury_ = 0;
-
     PoleBitwy poleBitwy_;
-
+    unsigned int dlugoscLinii_;
     Gracz pierwszyGracz_;
     Gracz drugiGracz_;
 
@@ -23,9 +22,11 @@ public:
     bool czyKoniec();
 
     void rozegrajTure();
-
     virtual ~Gra() = default;
+    virtual void wypisz();
+    void wypiszPrzerywnik();
 
+    unsigned int getDlugoscLinii() const;
 
 };
 

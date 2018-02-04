@@ -19,6 +19,8 @@ public:
 
     void atakuj() override;
 
+    void wypisz() override;
+
     void przyjmijAtak(double d) override;
 };
 

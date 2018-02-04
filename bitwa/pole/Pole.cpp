@@ -57,5 +57,9 @@ void Pole::czyMogeAtakowac(Oddzial *) {
 
 }
 
+void Pole::wypisz() {
+    getOddzial()->wypisz();
+}
+
 
 

@@ -79,6 +79,8 @@ public:
     void dodajWspierajacego(Wsparcie* wsparcie);
     virtual void atakuj(PolePierwszejLinii);
     virtual void atakuj(PoleDrugiejLinii);
+    virtual void wypisz();
+    void wypiszLiczebnosc();
 };
 
 

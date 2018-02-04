@@ -4,7 +4,7 @@
 #include "PolePosilkow.h"
 #include "PoleDrugiejLinii.h"
 #include "PolePierwszejLinii.h"
-
+class Gra;
 
 class PoleBitwy {
 private:
@@ -12,7 +12,7 @@ private:
     using wiersz_t = std::vector<std::shared_ptr<Pole>>;
     using wojsko_t = std::vector<wiersz_t>;
     std::vector<wojsko_t> poleGry_;
-
+    Gra* gra_;
 public:
 
     explicit PoleBitwy(unsigned int dlugoscLinii);
@@ -21,6 +21,11 @@ public:
 
     virtual ~PoleBitwy() = default;
     std::shared_ptr<Pole> zwrocPole(uint8_t gracz, int nrWiersza, int nrKolumny);
+    virtual void wypisz();
+
+    Gra* getGra() const;
+
+    void setGra(Gra *gra_);
 };
 
 

@@ -18,6 +18,8 @@ public:
     void atakuj(PoleDrugiejLinii linii) override;
 
     void przyjmijAtak(double obrazenia) override;
+
+    void wypisz() override;
 };
 
 

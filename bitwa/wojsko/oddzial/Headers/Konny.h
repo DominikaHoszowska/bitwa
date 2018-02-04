@@ -16,6 +16,8 @@ public:
     void atakuj(PolePierwszejLinii linii) override;
 
     void przyjmijAtak(double d) override;
+
+    void wypisz() override;
 };
 
 

@@ -2,8 +2,10 @@
 // Created by Dominika Hoszowska on 01.02.2018.
 //
 
+#include <iostream>
 #include "PoleBitwy.h"
-
+#include "../Gra.h"
+using std::cout;
 PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):
         poleGry_(2, wojsko_t(3))
 {
@@ -30,4 +32,38 @@ void PoleBitwy::ustawOddzial(uint8_t nrGracza, int nrWiersza, int nrKolumny, std
 
 std::shared_ptr<Pole> PoleBitwy::zwrocPole(uint8_t nrGracza, int nrWiersza, int nrKolumny) {
     return poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny);
+}
+
+void PoleBitwy::wypisz() {
+    for(unsigned int nrGracza=0;nrGracza<2;nrGracza++)
+    {
+        for(unsigned int nrWiersza=0;nrWiersza<3;nrWiersza++)
+        {
+           cout<<"            ";
+            for (unsigned int nrKolumny=0;nrKolumny<this->gra_->getDlugoscLinii();nrKolumny++)
+            {
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)== nullptr)
+                {
+                    cout<<" X ";
+                }
+                else {
+                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->wypisz();
+
+                }
+               cout<<" ";
+            }
+            cout<<std::endl;
+        }
+
+        this->getGra()->wypiszPrzerywnik();
+    }
+
+}
+
+Gra *PoleBitwy::getGra() const {
+    return gra_;
+}
+
+void PoleBitwy::setGra(Gra *gra_) {
+    PoleBitwy::gra_ = gra_;
 }

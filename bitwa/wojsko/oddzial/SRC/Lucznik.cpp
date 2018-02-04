@@ -2,6 +2,7 @@
 // Created by Dominika on 02.02.2018.
 //
 
+#include <iostream>
 #include "../Headers/Lucznik.h"
 #include "../../Wojsko.h"
 Lucznik::Lucznik() :Oddzial(), Zasiegowa()
@@ -31,4 +32,9 @@ void Lucznik::atakuj(PoleDrugiejLinii linii) {
 
 void Lucznik::przyjmijAtak(double obrazenia) {
     //TODO
+}
+
+void Lucznik::wypisz() {
+    std::cout<<this->OZNACZENIE;
+    wypiszLiczebnosc();
 }

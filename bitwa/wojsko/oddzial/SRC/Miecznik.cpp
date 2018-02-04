@@ -2,6 +2,7 @@
 // Created by Dominika on 02.02.2018.
 //
 
+#include <iostream>
 #include "../Headers/Miecznik.h"
 #include "../../Wojsko.h"
 
@@ -33,6 +34,11 @@ void Miecznik::przyjmijAtak(double obrazenia) {
         setStraty(straty);
     }
 
+}
+
+void Miecznik::wypisz() {
+    std::cout<<this->OZNACZENIE;
+    wypiszLiczebnosc();
 }
 
 

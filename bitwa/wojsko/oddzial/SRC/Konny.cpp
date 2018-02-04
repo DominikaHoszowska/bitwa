@@ -2,6 +2,7 @@
 // Created by Dominika on 02.02.2018.
 //
 
+#include <iostream>
 #include "../Headers/Konny.h"
 
 
@@ -28,4 +29,11 @@ void Konny::przyjmijAtak(double obrazenia) {
         straty+=getStraty();
         setStraty(straty);
     }
+}
+
+void Konny::wypisz() {
+    std::cout<<this->OZNACZENIE;
+    wypiszLiczebnosc();
+
+
 }

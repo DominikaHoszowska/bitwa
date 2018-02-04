@@ -18,6 +18,8 @@ public:
     void atakuj(PoleDrugiejLinii linii) override;
 
     void przyjmijAtak(double) override;
+
+    void wypisz() override;
 };
 
 

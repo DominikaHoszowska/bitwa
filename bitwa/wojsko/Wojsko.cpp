@@ -11,6 +11,7 @@
 #include "oddzial/Headers/Halabardzista.h"
 #include "oddzial/Headers/Konny.h"
 #include "oddzial/Headers/Bebniarz.h"
+#include "oddzial/Headers/Miecznik.h"
 
 Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy) :
         poleBitwy_(poleBitwy),
@@ -40,7 +41,11 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
                 case Bebniarz::OZNACZENIE:
                     oddzial = std::make_shared<Bebniarz>();
                     break;
+                case Miecznik::OZNACZENIE:
+                    oddzial=std::make_shared<Miecznik>();
+                    break;
                 case 'X':
+                    oddzial= nullptr;
                     break;
                 default:
                     throw std::invalid_argument("Nieprawidlowy znak na planszy");

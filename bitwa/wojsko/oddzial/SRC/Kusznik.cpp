@@ -2,6 +2,7 @@
 // Created by Dominika on 02.02.2018.
 //
 
+#include <iostream>
 #include "../Headers/Kusznik.h"
 #include "../../Wojsko.h"
 
@@ -29,5 +30,10 @@ void Kusznik::atakuj(PoleDrugiejLinii linii) {
 void Kusznik::przyjmijAtak(double obrazenia) {
     //TODO
 
+}
+
+void Kusznik::wypisz() {
+    std::cout<<this->OZNACZENIE;
+    wypiszLiczebnosc();
 }
 

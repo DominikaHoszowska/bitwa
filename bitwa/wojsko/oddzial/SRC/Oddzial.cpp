@@ -2,8 +2,10 @@
 // Created by Dominika Hoszowska on 01.02.2018.
 //
 
+#include <iostream>
 #include "../Headers/Oddzial.h"
 #include "../../Wojsko.h"
+using  std::cout;
 
 void Oddzial::wspieraj() {
 }
@@ -119,5 +121,25 @@ void Oddzial::atakuj(PoleDrugiejLinii) {
 
 void Oddzial::przyjmijAtak(double obrazenia) {
 //TODO
+}
+
+void Oddzial::wypisz() {
+
+}
+
+void Oddzial::wypiszLiczebnosc() {
+    cout<<":";
+    int liczba=100*liczebnoscOddzialu_/liczebnoscPoczatkowa;
+    if(liczba==100)
+    {
+        cout<<"00";
+        return;
+    }
+    if(liczba<10)
+    {
+        cout<<0;
+    }
+    cout<<liczba;
+
 }
 

@@ -2,6 +2,7 @@
 // Created by Dominika on 02.02.2018.
 //
 
+#include <iostream>
 #include "../Headers/Halabardzista.h"
 #include "../../Wojsko.h"
 Halabardzista::Halabardzista():Oddzial(),Zwarcie() {
@@ -20,5 +21,10 @@ void Halabardzista::atakuj(PolePierwszejLinii pole) {
 //        przeciwnik->przyjmijAtak(*this);
 //        TODO
     }
+}
+
+void Halabardzista::wypisz() {
+    std::cout<<this->OZNACZENIE;
+    wypiszLiczebnosc();
 }
 
