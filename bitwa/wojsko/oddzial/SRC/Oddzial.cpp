@@ -161,5 +161,26 @@ void Oddzial::wycofajWsparcie(Bebniarz wspierajacy) {
     morale_/=wspierajacy.zmianaMorale();
 }
 
+void Oddzial::przeliczStraty() {
+    if(straty_!=0)
+    {
+        int straty=(int)straty_;
+        straty_=0;
+        morale_-=straty/liczebnoscOddzialu_;
+        if(straty>liczebnoscOddzialu_)
+        {
+            likwidacja();
+            return;
+        }
+        liczebnoscOddzialu_-=straty;
+
+    }
+}
+
+void Oddzial::likwidacja() {
+
+
+}
+
 
 

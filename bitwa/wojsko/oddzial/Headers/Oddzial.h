@@ -87,6 +87,8 @@ public:
     virtual void wycofajWsparcie(Oddzial*);
     virtual void wycofajWsparcie(Tarczownik);
     virtual void wycofajWsparcie(Bebniarz);
+    void przeliczStraty();
+    void likwidacja();
 };
 
 

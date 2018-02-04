@@ -23,12 +23,14 @@ public:
     void wyslijWsparcie();
     void wykonajAtak();
     void wycofajWsparcie();
+    void przeliczStraty();
 
     Oddzial* wskazKogoWspierac(Wsparcie* wsparcie);
     Oddzial* wskazKogoWspierac(const PolePierwszejLinii&);
     Oddzial* wskazKogoWspierac(const Pole&);
     virtual Oddzial* znajdzPrzeciwnika(Oddzial);
     virtual Oddzial* znajdzPrzeciwnika(Lucznik);
+
 
 };
 

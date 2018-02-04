@@ -26,7 +26,8 @@ void Gracz::wycofajWsparcie() {
 }
 
 void Gracz::zakonczTure() {
-    //TODO
+    wojsko_.przeliczStraty();
+
 }
 
 uint8_t Gracz::zwrocIdentyfikator() {

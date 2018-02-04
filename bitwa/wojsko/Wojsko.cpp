@@ -116,5 +116,12 @@ Oddzial *Wojsko::znajdzPrzeciwnika(Lucznik) {
     return nullptr;
 }
 
+void Wojsko::przeliczStraty() {
+    for(Oddzial* oddzial: oddzialy_)
+    {
+        oddzial->przeliczStraty();
+    }
+}
+
 
 
