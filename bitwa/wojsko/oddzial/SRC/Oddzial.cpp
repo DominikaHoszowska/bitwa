@@ -105,6 +105,7 @@ void Oddzial::setZasieg_(int zasieg_) {
 
 Oddzial::Oddzial(){
     morale_=0;
+    straty_=0;
 }
 
 void Oddzial::atakuj() {

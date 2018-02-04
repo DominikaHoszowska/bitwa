@@ -42,14 +42,8 @@ void PoleBitwy::wypisz() {
            cout<<"            ";
             for (unsigned int nrKolumny=0;nrKolumny<this->gra_->getDlugoscLinii();nrKolumny++)
             {
-                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)== nullptr)
-                {
-                    cout<<" X ";
-                }
-                else {
-                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->wypisz();
 
-                }
+                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->wypisz();
                cout<<" ";
             }
             cout<<std::endl;

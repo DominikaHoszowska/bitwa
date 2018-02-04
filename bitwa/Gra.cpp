@@ -57,7 +57,7 @@ void Gra::rozegrajTure() {
 
 }
 
-void Gra::wypisz() {//TODO wypisywanie w przypadku X
+void Gra::wypisz() {
     wypiszPrzerywnik();
     wypiszPrzerywnik();
     std::cout<<"Tura "<<this->nrTury_<<" z "<<liczbaTur_<<std::endl;

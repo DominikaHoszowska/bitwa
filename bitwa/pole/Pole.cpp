@@ -2,6 +2,7 @@
 // Created by Dominika Hoszowska on 01.02.2018.
 //
 
+#include <iostream>
 #include "Pole.h"
 #include "../wojsko/oddzial/Headers/Oddzial.h"
 #include "../wojsko/Wojsko.h"
@@ -58,7 +59,12 @@ void Pole::czyMogeAtakowac(Oddzial *) {
 }
 
 void Pole::wypisz() {
-    getOddzial()->wypisz();
+    if(getOddzial()!= nullptr)
+        getOddzial()->wypisz();
+    else
+    {
+        std::cout<<" X ";
+    }
 }
 
 
