@@ -89,6 +89,7 @@ public:
     virtual void wycofajWsparcie(Bebniarz);
     void przeliczStraty();
     void likwidacja();
+    void ustawPole(Pole*);
 };
 
 

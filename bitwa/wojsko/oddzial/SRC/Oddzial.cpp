@@ -183,5 +183,9 @@ void Oddzial::likwidacja() {
     wojsko_->przesunSzeregi(pole_);
 }
 
+void Oddzial::ustawPole(Pole * pole) {
+    pole_=pole;
+}
+
 
 
