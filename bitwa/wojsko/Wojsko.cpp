@@ -12,6 +12,8 @@
 #include "oddzial/Headers/Konny.h"
 #include "oddzial/Headers/Bebniarz.h"
 #include "oddzial/Headers/Miecznik.h"
+#include "../pole/Pole.h"
+
 
 Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy) :
         poleBitwy_(poleBitwy),
@@ -121,6 +123,17 @@ void Wojsko::przeliczStraty() {
     {
         oddzial->przeliczStraty();
     }
+}
+
+void Wojsko::likwidacjaZmianaMorale(Pole *pole) {
+    //TODO
+
+}
+
+void Wojsko::przesunSzeregi(Pole *pole) {
+    delete pole->getOddzial();
+    //TODO
+
 }
 
 

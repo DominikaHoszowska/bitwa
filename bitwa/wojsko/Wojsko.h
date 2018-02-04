@@ -30,7 +30,8 @@ public:
     Oddzial* wskazKogoWspierac(const Pole&);
     virtual Oddzial* znajdzPrzeciwnika(Oddzial);
     virtual Oddzial* znajdzPrzeciwnika(Lucznik);
-
+    void likwidacjaZmianaMorale(Pole*);
+    void przesunSzeregi(Pole*);
 
 };
 

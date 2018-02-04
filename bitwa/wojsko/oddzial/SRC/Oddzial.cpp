@@ -179,7 +179,8 @@ void Oddzial::przeliczStraty() {
 
 void Oddzial::likwidacja() {
 
-
+    wojsko_->likwidacjaZmianaMorale(pole_);
+    wojsko_->przesunSzeregi(pole_);
 }
 
 
