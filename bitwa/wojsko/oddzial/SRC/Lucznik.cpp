@@ -34,7 +34,7 @@ void Lucznik::przyjmijAtak(double obrazenia) {
     //TODO
 }
 
-void Lucznik::wypisz() {
+const void Lucznik::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
 }

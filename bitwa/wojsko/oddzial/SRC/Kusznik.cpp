@@ -32,7 +32,7 @@ void Kusznik::przyjmijAtak(double obrazenia) {
 
 }
 
-void Kusznik::wypisz() {
+const void Kusznik::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
 }

@@ -36,7 +36,7 @@ void Bebniarz::przyjmijAtak(double obrazenia) {
         setStraty(straty);
     }}
 
-void Bebniarz::wypisz() {
+const void Bebniarz::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
 }

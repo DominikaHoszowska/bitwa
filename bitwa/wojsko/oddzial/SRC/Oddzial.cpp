@@ -17,7 +17,7 @@ void Oddzial::wycofajWsparcie() {
 //TODO
 }
 
-Pole *Oddzial::getPole() const {
+Pole *Oddzial::getPole()  {
     return pole_;
 }
 
@@ -124,7 +124,7 @@ void Oddzial::przyjmijAtak(double obrazenia) {
 //TODO
 }
 
-void Oddzial::wypisz() {
+const void Oddzial::wypisz() {
 
 }
 
@@ -143,4 +143,6 @@ void Oddzial::wypiszLiczebnosc() {
     cout<<liczba;
 
 }
+
+
 

@@ -15,7 +15,7 @@ class Gracz;
 class Wojsko {
 private:
     PoleBitwy* poleBitwy_;
-    std::list<std::shared_ptr<Oddzial>> oddzialy_;
+    std::list<Oddzial*> oddzialy_;
     Gracz* gracz_;
 public:
     Wojsko(Gracz *gracz_,std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy);
@@ -25,8 +25,8 @@ public:
     void wycofajWsparcie();
 
     Oddzial* wskazKogoWspierac(Wsparcie* wsparcie);
-    std::shared_ptr<Oddzial> wskazKogoWspierac(const PolePierwszejLinii&);
-    std::shared_ptr<Oddzial> wskazKogoWspierac(const Pole&);
+    Oddzial* wskazKogoWspierac(const PolePierwszejLinii&);
+    Oddzial* wskazKogoWspierac(const Pole&);
     virtual Oddzial* znajdzPrzeciwnika(Oddzial);
     virtual Oddzial* znajdzPrzeciwnika(Lucznik);
 

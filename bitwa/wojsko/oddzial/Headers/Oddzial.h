@@ -40,7 +40,7 @@ public:
     virtual void wycofajWsparcie();
     virtual void przyjmijAtak(double);
 
-    Pole *getPole() const;
+    Pole *getPole() ;
     void setPole(Pole *pole_);
 
     Wojsko *getWojsko() const;
@@ -79,8 +79,10 @@ public:
     void dodajWspierajacego(Wsparcie* wsparcie);
     virtual void atakuj(PolePierwszejLinii);
     virtual void atakuj(PoleDrugiejLinii);
-    virtual void wypisz();
+    virtual const void wypisz();
     void wypiszLiczebnosc();
+
+    virtual ~Oddzial()= default;
 };
 
 

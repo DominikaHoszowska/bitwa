@@ -36,7 +36,7 @@ void Miecznik::przyjmijAtak(double obrazenia) {
 
 }
 
-void Miecznik::wypisz() {
+const void Miecznik::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
 }

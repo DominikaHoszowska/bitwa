@@ -14,12 +14,12 @@ Pole::Pole(PoleBitwy *poleBitwy): poleBitwy_(poleBitwy) {
 
 
 
-void Pole::ustawOddzial(const std::shared_ptr<Oddzial>& oddzial) {
+void Pole::ustawOddzial ( Oddzial* oddzial) {
     oddzial_= oddzial;
 }
 
 void Pole::usunOddzial() {
-    oddzial_.reset();
+    delete oddzial_;
 }
 
 void Pole::ustawWspolrzedne(uint8_t nrGracza, unsigned int nrWiersza, unsigned int nrKolumny) {
@@ -34,7 +34,7 @@ Pole::~Pole() {
 
 }
 
-const std::shared_ptr<Oddzial> &Pole::getOddzial() const {
+ Oddzial* Pole::getOddzial()  {
     return oddzial_;
 }
 
@@ -49,8 +49,7 @@ unsigned int Pole::getNrWiersza_() const {
 unsigned int Pole::getNrKolumny_() const {
     return nrKolumny_;
 }
-
-std::shared_ptr<Oddzial> Pole::zwrocOddzial() {
+Oddzial* Pole::zwrocOddzial() {
     return oddzial_;
 }
 
@@ -58,13 +57,17 @@ void Pole::czyMogeAtakowac(Oddzial *) {
 
 }
 
-void Pole::wypisz() {
+const void Pole::wypisz() {
     if(getOddzial()!= nullptr)
         getOddzial()->wypisz();
     else
     {
         std::cout<<" X ";
     }
+}
+
+Oddzial *Pole::kogoWspierac(Wojsko *wojsko) {
+    return nullptr;
 }
 
 

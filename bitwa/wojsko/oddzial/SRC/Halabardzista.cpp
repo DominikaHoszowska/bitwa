@@ -23,7 +23,7 @@ void Halabardzista::atakuj(PolePierwszejLinii pole) {
     }
 }
 
-void Halabardzista::wypisz() {
+const void Halabardzista::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
 }

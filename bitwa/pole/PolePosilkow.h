@@ -11,7 +11,7 @@
 class PolePosilkow: public Pole{
 public:
     explicit PolePosilkow(PoleBitwy *poleBitwy);
-    std::shared_ptr<Oddzial> kogoWspierac(Wojsko *wojsko) override;
+    Oddzial* kogoWspierac(Wojsko *wojsko) override;
 
     void czyMogeAtakowac(Oddzial *oddzial) override;
 };

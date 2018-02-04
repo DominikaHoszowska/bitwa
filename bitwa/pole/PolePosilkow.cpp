@@ -9,7 +9,7 @@ PolePosilkow::PolePosilkow(PoleBitwy *poleBitwy) : Pole(poleBitwy) {
 
 }
 
-std::shared_ptr<Oddzial> PolePosilkow::kogoWspierac(Wojsko *wojsko) {
+Oddzial* PolePosilkow::kogoWspierac(Wojsko *wojsko) {
     return wojsko->wskazKogoWspierac(*this);
 }
 

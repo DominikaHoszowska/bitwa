@@ -14,7 +14,7 @@ public:
     static const char OZNACZENIE = 'H';
     void atakuj(PolePierwszejLinii linii) override;
 
-    void wypisz() override;
+    const void wypisz() override;
 };
 
 

@@ -21,28 +21,28 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
 
     for (unsigned int nrWiersza = 0; nrWiersza < 3; nrWiersza++) {
         for(unsigned int nrKolumny=0;nrKolumny<wojsko.at(nrWiersza).size();nrKolumny++) {
-            std::shared_ptr<Oddzial> oddzial;
+            Oddzial *oddzial= nullptr;
             switch (wojsko.at(nrWiersza).at(nrKolumny)) {
                 case Tarczownik::OZNACZENIE:
-                    oddzial = std::make_shared<Tarczownik>();
+                    oddzial = new Tarczownik();
                     break;
                 case Lucznik::OZNACZENIE:
-                    oddzial=std::make_shared<Lucznik>();
+                    oddzial=new Lucznik();
                     break;
                 case Kusznik::OZNACZENIE:
-                    oddzial=std::make_shared<Kusznik>();
+                    oddzial=new Kusznik();
                     break;
                 case Halabardzista::OZNACZENIE:
-                    oddzial= std::make_shared<Halabardzista>();
+                    oddzial= new Halabardzista();
                     break;
                 case Konny::OZNACZENIE:
-                    oddzial=std::make_shared<Konny>();
+                    oddzial=new Konny();
                     break;
                 case Bebniarz::OZNACZENIE:
-                    oddzial = std::make_shared<Bebniarz>();
+                    oddzial = new Bebniarz();
                     break;
                 case Miecznik::OZNACZENIE:
-                    oddzial=std::make_shared<Miecznik>();
+                    oddzial=new Miecznik;
                     break;
                 case 'X':
                     oddzial= nullptr;
@@ -63,38 +63,37 @@ bool Wojsko::czyPuste() {
 }
 
 void Wojsko::wyslijWsparcie() {
-for(std::shared_ptr<Oddzial> oddzial:oddzialy_)
+for(Oddzial* oddzial:oddzialy_)
 {
     oddzial->wspieraj();
 }
 }
 
 void Wojsko::wykonajAtak() {
-    for(std::shared_ptr<Oddzial> oddzial:oddzialy_)
+    for(Oddzial* oddzial:oddzialy_)
     {
         oddzial->atakuj();
     }}
 
 void Wojsko::wycofajWsparcie() {
-    for(std::shared_ptr<Oddzial> oddzial:oddzialy_)
+    for(Oddzial* oddzial:oddzialy_)
     {
         oddzial->wycofajWsparcie();
     }
 }
 
-Oddzial* Wojsko::wskazKogoWspierac(Wsparcie *wsparcie) {
+Oddzial* Wojsko::wskazKogoWspierac(Wsparcie *wsparcie) {//TODO probelem z naruszeniem pamieci
 
-     auto pole = wsparcie->getPole();
 
-    return (pole->kogoWspierac(this)).get();
+    return   wsparcie->getPole()->kogoWspierac(this);
 
 }
 
-std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(const Pole &pole ) {
+Oddzial* Wojsko::wskazKogoWspierac(const Pole &pole ) {
     return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_())->zwrocOddzial();
 }
 
-std::shared_ptr<Oddzial> Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pole) {
+Oddzial* Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pole) {
     if(poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1)!= nullptr) {
         return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1)->zwrocOddzial();
     }

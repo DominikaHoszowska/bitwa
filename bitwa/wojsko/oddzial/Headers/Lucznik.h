@@ -19,7 +19,7 @@ public:
 
     void przyjmijAtak(double) override;
 
-    void wypisz() override;
+    const void wypisz() override;
 };
 
 

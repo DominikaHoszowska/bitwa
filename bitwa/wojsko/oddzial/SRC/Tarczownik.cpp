@@ -37,7 +37,7 @@ void Tarczownik::przyjmijAtak(double obrazenia) {
     }
 }
 
-void Tarczownik::wypisz() {
+const void Tarczownik::wypisz() {
 
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();

@@ -13,7 +13,7 @@ class Oddzial;
 
 class Pole {
 private:
-    std::shared_ptr<Oddzial> oddzial_;
+    Oddzial* oddzial_;
     PoleBitwy* poleBitwy_;
     unsigned int nrGracza_;
     unsigned int nrWiersza_;
@@ -24,13 +24,12 @@ public:
     explicit Pole(PoleBitwy *poleBitwy);
     void ustawWspolrzedne(uint8_t ,unsigned int,unsigned int);
 
-    const std::shared_ptr<Oddzial> &getOddzial() const;
-    std::shared_ptr<Oddzial> zwrocOddzial();
-    void ustawOddzial(const std::shared_ptr<Oddzial>&);
+     Oddzial* getOddzial() ;
+    Oddzial* zwrocOddzial();
+    void ustawOddzial( Oddzial*);
     void usunOddzial();
     virtual ~Pole() = 0;
-    virtual std::shared_ptr<Oddzial> kogoWspierac(Wojsko *wojsko)=0;
-
+    virtual Oddzial* kogoWspierac(Wojsko *wojsko);
 
     unsigned int getNrGracza_() const;
 
@@ -38,11 +37,8 @@ public:
 
     unsigned int getNrKolumny_() const;
     virtual void czyMogeAtakowac(Oddzial*);
-    void wypisz();
+    const void wypisz();
 };
 
 
 #endif //BITWA_POLE_H
-
-
-//TODO : zmiana autora plików

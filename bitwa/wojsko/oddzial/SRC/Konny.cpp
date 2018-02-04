@@ -31,7 +31,7 @@ void Konny::przyjmijAtak(double obrazenia) {
     }
 }
 
-void Konny::wypisz() {
+const void Konny::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
 

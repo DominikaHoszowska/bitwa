@@ -40,7 +40,7 @@ int main() {
 //    }
 
     /*Wczytanie wojsk*/
-    std::vector<std::vector<std::vector<char>>> tabPole /*(6)*/ = {{{'L', 'X'},{'k', 'k'},{'M', 'L'}},{{'L', 'L'},{'L', 'L'},{'L', 'L'}}};
+    std::vector<std::vector<std::vector<char>>> tabPole /*(6)*/ = {{{'B', 'T'},{'k', 'k'},{'M', 'L'}},{{'L', 'L'},{'L', 'L'},{'L', 'L'}}};
 //    char znak;
 //    std::cout<<"Wprowadz wojska";
 //  for(int nrWiersza=2;nrWiersza>=0;nrWiersza--)
@@ -59,8 +59,8 @@ int main() {
 //    }
     Gra gra(liczbaTur,dlugoscLinii,tabPole);
     gra.wypisz();
-//    while(!gra.czyKoniec())
-//    {
-//        gra.rozegrajTure();
-//    }
+    while(!gra.czyKoniec())
+    {
+        gra.rozegrajTure();
+    }
 }
