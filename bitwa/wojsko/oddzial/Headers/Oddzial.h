@@ -10,10 +10,12 @@
 #include "../../../pole/PolePierwszejLinii.h"
 #include "../../../pole/PoleDrugiejLinii.h"
 
+
 class Pole;
 class Wojsko;
 class Wsparcie;
-
+class Tarczownik;
+class Bebniarz;
 
 class Oddzial {
 public:
@@ -81,8 +83,10 @@ public:
     virtual void atakuj(PoleDrugiejLinii);
     virtual const void wypisz();
     void wypiszLiczebnosc();
-
     virtual ~Oddzial()= default;
+    virtual void wycofajWsparcie(Oddzial*);
+    virtual void wycofajWsparcie(Tarczownik);
+    virtual void wycofajWsparcie(Bebniarz);
 };
 
 

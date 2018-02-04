@@ -20,6 +20,8 @@ public:
     void przyjmijAtak(double d) override;
 
     const void wypisz() override;
+
+    void wycofajWsparcie(Oddzial *oddzial) override;
 };
 
 

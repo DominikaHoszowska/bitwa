@@ -5,6 +5,8 @@
 #include <iostream>
 #include "../Headers/Oddzial.h"
 #include "../../Wojsko.h"
+#include "../Headers/Tarczownik.h"
+#include "../Headers/Bebniarz.h"
 using  std::cout;
 
 void Oddzial::wspieraj() {
@@ -14,7 +16,10 @@ void Oddzial::wspieraj() {
 
 void Oddzial::wycofajWsparcie() {
 
-//TODO
+    for(Oddzial* wspierajacy: wsparcie_)
+    {
+        wspierajacy->wycofajWsparcie(this);
+    }
 }
 
 Pole *Oddzial::getPole()  {
@@ -142,6 +147,18 @@ void Oddzial::wypiszLiczebnosc() {
     }
     cout<<liczba;
 
+}
+
+void Oddzial::wycofajWsparcie(Oddzial *oddzial) {
+
+}
+
+void Oddzial::wycofajWsparcie(Tarczownik wspierajacy) {
+    obrona_/=wspierajacy.zmianaObrona();
+}
+
+void Oddzial::wycofajWsparcie(Bebniarz wspierajacy) {
+    morale_/=wspierajacy.zmianaMorale();
 }
 
 

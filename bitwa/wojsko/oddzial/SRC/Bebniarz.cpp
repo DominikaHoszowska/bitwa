@@ -40,3 +40,7 @@ const void Bebniarz::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
 }
+
+void Bebniarz::wycofajWsparcie(Oddzial *oddzial) {
+    oddzial->wycofajWsparcie(*this);
+}

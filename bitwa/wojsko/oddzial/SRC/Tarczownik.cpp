@@ -42,3 +42,7 @@ const void Tarczownik::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
 }
+
+void Tarczownik::wycofajWsparcie(Oddzial *oddzial) {
+    oddzial->wycofajWsparcie(*this);
+}
