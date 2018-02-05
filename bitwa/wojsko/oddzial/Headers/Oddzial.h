@@ -36,7 +36,7 @@ protected:
     int wytrzymalosc_;
     int liczebnoscOddzialu_;
     int liczebnoscPoczatkowa;
-    int zasieg_;
+    unsigned int zasieg_;
 
 public:
     virtual void wspieraj();
@@ -76,9 +76,8 @@ public:
 
     void setLiczebnoscPoczatkowa(int liczebnoscPoczatkowa);
 
-    int getZasieg_() const;
+    unsigned int getZasieg_() const;
 
-    void setZasieg_(int zasieg_);
 
     void dodajWspierajacego(Wsparcie* wsparcie);
     virtual void atakuj(PolePierwszejLinii&);

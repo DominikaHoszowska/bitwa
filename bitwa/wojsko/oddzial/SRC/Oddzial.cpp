@@ -100,13 +100,11 @@ void Oddzial::setLiczebnoscPoczatkowa(int liczebnoscPoczatkowa) {
     Oddzial::liczebnoscPoczatkowa = liczebnoscPoczatkowa;
 }
 
-int Oddzial::getZasieg_() const {
+unsigned int Oddzial::getZasieg_() const {
     return zasieg_;
 }
 
-void Oddzial::setZasieg_(int zasieg_) {
-    Oddzial::zasieg_ = zasieg_;
-}
+
 
 Oddzial::Oddzial(){
     morale_=0;
@@ -155,7 +153,7 @@ void Oddzial::wypiszLiczebnosc() {
 
 }
 
-void Oddzial::wycofajWsparcie(Oddzial *oddzial) {
+void Oddzial::wycofajWsparcie(Oddzial*) {
 
 }
 
@@ -202,7 +200,7 @@ void Oddzial::zmniejszMorale() {
     morale_-=0.25;
 }
 
-void Oddzial::przesunSzeregiT(Wojsko* wojsko) {
+void Oddzial::przesunSzeregiT(Wojsko*) {
 //nie robimy nic, tylko jak jest Tarczownikiem
 
 }

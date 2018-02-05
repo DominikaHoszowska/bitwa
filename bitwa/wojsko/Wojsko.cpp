@@ -4,15 +4,12 @@
 
 #include "Wojsko.h"
 #include "../Gracz.h"
-#include "oddzial/Headers/Oddzial.h"
 #include "oddzial/Headers/Tarczownik.h"
-#include "oddzial/Headers/Lucznik.h"
 #include "oddzial/Headers/Kusznik.h"
 #include "oddzial/Headers/Halabardzista.h"
 #include "oddzial/Headers/Konny.h"
 #include "oddzial/Headers/Bebniarz.h"
 #include "oddzial/Headers/Miecznik.h"
-#include "../pole/Pole.h"
 #include "../Gra.h"
 
 
@@ -21,7 +18,6 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
         gracz_(gracz_)
 
 {
-
     for (unsigned int nrWiersza = 0; nrWiersza < 3; nrWiersza++) {
         for(unsigned int nrKolumny=0;nrKolumny<wojsko.at(nrWiersza).size();nrKolumny++) {
             Oddzial *oddzial= nullptr;
@@ -96,7 +92,7 @@ Oddzial* Wojsko::wskazKogoWspierac(const Pole &pole ) {
 }
 
 Oddzial* Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pole) {
-   PoleBitwy* poleBitwy=poleBitwy_;//TODO blad ochrony pamieci
+    PoleBitwy* poleBitwy=poleBitwy_;//TODO blad ochrony pamieci
     Gra* gra=poleBitwy->getGra();
     unsigned int dlugoscLinii=gra->getDlugoscLinii();
     if(pole.getNrKolumny_()>0)
