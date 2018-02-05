@@ -198,17 +198,8 @@ void Wojsko::przesunSzeregi(PoleDrugiejLinii pole) {
     pole.ustawOddzial(poleBitwy_->zwrocPole(pole.getNrGracza_(),2,pole.getNrKolumny_())->zwrocOddzial());
     poleBitwy_->zwrocPole(pole.getNrGracza_(),2,pole.getNrKolumny_())->ustawOddzial(nullptr);
     pole.zwrocOddzial()->przesunSzeregiT(this);
-
-
-
-
-
 }
 
-void Wojsko::konsoldacjaSzeregow(unsigned int nrKolumny) {
-    //TODO
-
-}
 
 void Wojsko::zamienTarczownika(Pole* pole) {
     Oddzial* oddzial=pole->getOddzial();
@@ -218,4 +209,33 @@ void Wojsko::zamienTarczownika(Pole* pole) {
 }
 
 
+void Wojsko::konsoldacjaSzeregow(unsigned int nrKolumny) {
+    if(nrKolumny<poleBitwy_->getGra()->getDlugoscLinii()/2)
+    {
+        konsoldacjaSzeregowPierwszaPolowa(nrKolumny);
+    }
+    konsoldacjaSzeregowDrugaPolowa(nrKolumny);
+}
+
+void Wojsko::konsoldacjaSzeregowPierwszaPolowa(unsigned int) {
+
+}
+
+void Wojsko::konsoldacjaSzeregowDrugaPolowa(unsigned int nrKolumny) {
+
+    if(nrKolumny!=poleBitwy_->getGra()->getDlugoscLinii()/2) {
+        for (unsigned int nrWiersza = 0; nrWiersza <= 2; nrWiersza++) {
+
+                poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny - 1)
+                        ->ustawOddzial(poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza,
+                                                             nrKolumny)->zwrocOddzial());
+                poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny)->ustawOddzial(nullptr);
+
+
+
+        }
+        if(nrKolumny+1<poleBitwy_->getGra()->getDlugoscLinii())
+             konsoldacjaSzeregowDrugaPolowa(nrKolumny+1);
+    }
+}
 
