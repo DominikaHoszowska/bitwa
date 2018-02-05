@@ -13,8 +13,11 @@ public:
     Halabardzista();
     static const char OZNACZENIE = 'H';
     void atakuj(PolePierwszejLinii linii) override;
-
     const void wypisz() override;
+
+    void atakuj(Konny &konny) override;
+
+    void atakuj(Oddzial &oddzial) override;
 };
 
 

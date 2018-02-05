@@ -16,6 +16,7 @@ class Wojsko;
 class Wsparcie;
 class Tarczownik;
 class Bebniarz;
+class Konny;
 
 class Oddzial {
 public:
@@ -92,6 +93,10 @@ public:
     void ustawPole(Pole*);
     void zmniejszMorale();
     virtual void przesunSzeregiT(Wojsko*);
+    virtual void przyjmijAtakW(Oddzial*);
+
+    virtual void atakuj(Konny&);
+    virtual void atakuj(Oddzial&);
 
 
 };

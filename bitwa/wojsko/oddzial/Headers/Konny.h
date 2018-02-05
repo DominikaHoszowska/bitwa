@@ -18,6 +18,8 @@ public:
     void przyjmijAtak(double d) override;
 
     const void wypisz() override;
+
+    void przyjmijAtakW(Oddzial *oddzial) override;
 };
 
 

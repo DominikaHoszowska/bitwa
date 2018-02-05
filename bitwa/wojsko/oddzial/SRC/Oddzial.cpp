@@ -201,5 +201,17 @@ void Oddzial::przesunSzeregiT(Wojsko* wojsko) {
 
 }
 
+void Oddzial::przyjmijAtakW(Oddzial *oddzial) {
+    oddzial->atakuj(*this);
+}
+
+void Oddzial::atakuj(Konny &) {
+
+}
+
+void Oddzial::atakuj(Oddzial &) {
+
+}
+
 
 

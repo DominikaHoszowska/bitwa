@@ -37,3 +37,7 @@ const void Konny::wypisz() {
 
 
 }
+
+void Konny::przyjmijAtakW(Oddzial *oddzial) {
+    oddzial->atakuj(*this);
+}
