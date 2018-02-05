@@ -91,6 +91,9 @@ public:
     void likwidacja();
     void ustawPole(Pole*);
     void zmniejszMorale();
+    virtual void przesunSzeregiT(Wojsko*);
+
+
 };
 
 

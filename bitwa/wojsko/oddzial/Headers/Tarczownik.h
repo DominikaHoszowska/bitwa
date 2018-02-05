@@ -24,6 +24,8 @@ public:
     void przyjmijAtak(double d) override;
 
     void wycofajWsparcie(Oddzial *oddzial) override;
+
+    void przesunSzeregiT(Wojsko*) override;
 };
 
 

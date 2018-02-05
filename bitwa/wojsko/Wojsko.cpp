@@ -195,6 +195,10 @@ void Wojsko::przesunSzeregi(PoleDrugiejLinii pole) {
     {
         return;
     }
+    pole.ustawOddzial(poleBitwy_->zwrocPole(pole.getNrGracza_(),2,pole.getNrKolumny_())->zwrocOddzial());
+    poleBitwy_->zwrocPole(pole.getNrGracza_(),2,pole.getNrKolumny_())->ustawOddzial(nullptr);
+    pole.zwrocOddzial()->przesunSzeregiT(this);
+
 
 
 
@@ -204,6 +208,13 @@ void Wojsko::przesunSzeregi(PoleDrugiejLinii pole) {
 void Wojsko::konsoldacjaSzeregow(unsigned int nrKolumny) {
     //TODO
 
+}
+
+void Wojsko::zamienTarczownika(Pole* pole) {
+    Oddzial* oddzial=pole->getOddzial();
+    pole->ustawOddzial(poleBitwy_->zwrocPole(pole->getNrGracza_(),0,pole->getNrKolumny_())->zwrocOddzial());
+    poleBitwy_->zwrocPole(pole->getNrGracza_(),0,pole->getNrKolumny_())->ustawOddzial(oddzial);
+    delete oddzial;
 }
 
 

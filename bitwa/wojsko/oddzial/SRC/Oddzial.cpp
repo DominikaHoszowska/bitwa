@@ -196,5 +196,10 @@ void Oddzial::zmniejszMorale() {
     morale_-=0.25;
 }
 
+void Oddzial::przesunSzeregiT(Wojsko* wojsko) {
+//nie robimy nic, tylko jak jest Tarczownikiem
+
+}
+
 
 

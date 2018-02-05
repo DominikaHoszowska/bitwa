@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "../Headers/Tarczownik.h"
-
+#include "../../Wojsko.h"
 double Tarczownik::zmianaMorale() {
     return 1.0;
 }
@@ -45,4 +45,8 @@ const void Tarczownik::wypisz() {
 
 void Tarczownik::wycofajWsparcie(Oddzial *oddzial) {
     oddzial->wycofajWsparcie(*this);
+}
+
+void Tarczownik::przesunSzeregiT(Wojsko* wojsko) {
+    wojsko->zamienTarczownika(this->getPole());
 }

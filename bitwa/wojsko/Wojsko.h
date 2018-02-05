@@ -35,7 +35,7 @@ public:
     virtual void przesunSzeregi(PolePierwszejLinii);
     virtual void przesunSzeregi(PoleDrugiejLinii);
     virtual void konsoldacjaSzeregow(unsigned int);
-
+    void zamienTarczownika(Pole*);
 
 };
 
