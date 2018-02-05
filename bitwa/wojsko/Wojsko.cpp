@@ -49,8 +49,10 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
                 default:
                     throw std::invalid_argument("Nieprawidlowy znak na planszy");
             }
+            oddzial->setWojsko(this);
             oddzialy_.push_back(oddzial);
             poleBitwy_->ustawOddzial(gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny, oddzial);
+
         }
     }
 }
@@ -92,7 +94,7 @@ Oddzial* Wojsko::wskazKogoWspierac(const Pole &pole ) {
 }
 
 Oddzial* Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pole) {
-    PoleBitwy* poleBitwy=poleBitwy_;//TODO blad ochrony pamieci
+    PoleBitwy* poleBitwy=poleBitwy_;
     Gra* gra=poleBitwy->getGra();
     unsigned int dlugoscLinii=gra->getDlugoscLinii();
     if(pole.getNrKolumny_()>0)
