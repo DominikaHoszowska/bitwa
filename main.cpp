@@ -21,7 +21,7 @@ bool sprawdzMaksymalnaLiczbeTur(int liczbaTur)
 }
 int main() {
     int dlugoscLinii=2;
-    int liczbaTur=2;
+    int liczbaTur=5;
 
 //    std::cout << "Wprowadz dlugosc linii" << std::endl;
 //    std::cin >> dlugoscLinii;
