@@ -69,8 +69,8 @@ Oddzial *PoleBitwy::znajdzPrzeciwnika(Oddzial& atakujacy, uint8_t nrPrzeciwnika)
         return poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny)->zwrocOddzial();
     }
     unsigned int zasieg=atakujacy.getZasieg_();
-    unsigned int odleglosc = 1;
-    while(odleglosc <= zasieg)
+    unsigned int odleglosc=1;
+    while(odleglosc<=zasieg)
     {
         if(static_cast<int>(nrKolumny) - static_cast<int>(odleglosc) >= 0
            && poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny-odleglosc)->zwrocOddzial()!= nullptr)
@@ -93,10 +93,10 @@ Oddzial *PoleBitwy::znajdzPrzeciwnika(Lucznik& atakujacy, uint8_t nrPrzeciwnika 
         return poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny)->zwrocOddzial();
     }
     unsigned int zasieg=atakujacy.getZasieg_();
-    int odleglosc=1;
+    unsigned int odleglosc=1;
     while(odleglosc<=zasieg)
     {
-        if(static_cast<int>(nrKolumny) - odleglosc >= 0
+        if(static_cast<int>(nrKolumny) - static_cast<int> (odleglosc) >= 0
            && poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny-odleglosc)->zwrocOddzial()!= nullptr)
         {
             return poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny-odleglosc)->zwrocOddzial();
@@ -114,7 +114,7 @@ Oddzial *PoleBitwy::znajdzPrzeciwnika(Lucznik& atakujacy, uint8_t nrPrzeciwnika 
     odleglosc=1;
     while(odleglosc<=zasieg)
     {
-        if(static_cast<int>(nrKolumny) - odleglosc >= 0
+        if(static_cast<int>(nrKolumny) - static_cast<int>(odleglosc) >= 0
            && poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny-odleglosc)->zwrocOddzial()!= nullptr)
         {
             return poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny-odleglosc)->zwrocOddzial();
