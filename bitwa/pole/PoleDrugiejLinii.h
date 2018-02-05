@@ -9,7 +9,7 @@
 
 class PoleDrugiejLinii: public Pole{
 public:
-    explicit PoleDrugiejLinii(PoleBitwy *poleBitwy);
+    explicit PoleDrugiejLinii() = default;
 
     Oddzial* kogoWspierac(Wojsko *wojsko) override;
 

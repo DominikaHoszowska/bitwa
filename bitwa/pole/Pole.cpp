@@ -7,13 +7,6 @@
 #include "../wojsko/oddzial/Headers/Oddzial.h"
 #include "../wojsko/Wojsko.h"
 
-
-Pole::Pole(PoleBitwy *poleBitwy): poleBitwy_(poleBitwy) {
-
-}
-
-
-
 void Pole::ustawOddzial ( Oddzial* oddzial) {
     oddzial_= oddzial;
     if(oddzial!= nullptr)

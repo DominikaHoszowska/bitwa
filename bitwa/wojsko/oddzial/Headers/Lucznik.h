@@ -10,6 +10,9 @@
 
 class Lucznik: public Zasiegowa{
 public:
+
+    using Oddzial::atakuj;
+
     Lucznik();
     static const char OZNACZENIE = 'L';
 

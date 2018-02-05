@@ -10,6 +10,9 @@
 
 class Kusznik: public Zasiegowa {
 public:
+
+    using Oddzial::atakuj;
+
     Kusznik();
     static const char OZNACZENIE= 'k';
 

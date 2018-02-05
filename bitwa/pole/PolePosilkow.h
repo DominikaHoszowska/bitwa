@@ -10,7 +10,7 @@
 
 class PolePosilkow: public Pole{
 public:
-    explicit PolePosilkow(PoleBitwy *poleBitwy);
+    explicit PolePosilkow() = default;
     Oddzial* kogoWspierac(Wojsko *wojsko) override;
 
     void czyMogeAtakowac(Oddzial *oddzial) override;

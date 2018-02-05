@@ -10,6 +10,9 @@
 
 class Konny: public Zwarcie{
 public:
+
+    using Oddzial::atakuj;
+
     Konny();
     static const char OZNACZENIE= 'K';
 

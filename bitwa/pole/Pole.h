@@ -15,14 +15,13 @@ class Kusznik;
 class Pole {
 private:
     Oddzial* oddzial_;
-    PoleBitwy* poleBitwy_;
     unsigned int nrGracza_;
     unsigned int nrWiersza_;
     unsigned int nrKolumny_;
 
 public:
 
-    explicit Pole(PoleBitwy *poleBitwy);
+    explicit Pole() = default;
     void ustawWspolrzedne(uint8_t ,unsigned int,unsigned int);
 
      Oddzial* getOddzial() ;

@@ -10,6 +10,9 @@
 
 class Miecznik: public Zwarcie {
 public:
+
+    using Oddzial::atakuj;
+
     Miecznik();
     static const char OZNACZENIE = 'M';
 

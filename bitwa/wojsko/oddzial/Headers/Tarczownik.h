@@ -11,6 +11,9 @@
 
 class Tarczownik: public Zwarcie, public Wsparcie{
 public:
+
+    using Oddzial::atakuj;
+
     Tarczownik();
     static const char OZNACZENIE = 'T';
 

@@ -10,6 +10,9 @@
 
 class Halabardzista: public Zwarcie {
 public:
+
+    using Oddzial::atakuj;
+
     Halabardzista();
     static const char OZNACZENIE = 'H';
     void atakuj(PolePierwszejLinii& linii) override;

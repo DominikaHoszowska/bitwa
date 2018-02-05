@@ -10,6 +10,9 @@
 #include "Wsparcie.h"
 class Bebniarz: public Zasiegowa, public Wsparcie {
 public:
+
+    using Oddzial::atakuj;
+
     Bebniarz();
     static const char OZNACZENIE ='B';
     double zmianaMorale() override;

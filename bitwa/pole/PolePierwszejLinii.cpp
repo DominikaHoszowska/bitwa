@@ -7,10 +7,6 @@
 #include "../wojsko/Wojsko.h"
 #include "../wojsko/oddzial/Headers/Kusznik.h"
 
-PolePierwszejLinii::PolePierwszejLinii(PoleBitwy *poleBitwy) : Pole(poleBitwy) {
-
-}
-
 Oddzial* PolePierwszejLinii::kogoWspierac(Wojsko *wojsko) {
     return wojsko->wskazKogoWspierac(*this);
 }
