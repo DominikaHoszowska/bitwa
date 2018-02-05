@@ -16,10 +16,14 @@ void Oddzial::wspieraj() {
 
 void Oddzial::wycofajWsparcie() {
 
-    for(Oddzial* wspierajacy: wsparcie_)
+    while (!wsparcie_.empty())
     {
+        Wsparcie* wspierajacy=wsparcie_.front();
+        wsparcie_.pop_front();
         wspierajacy->wycofajWsparcie(this);
+
     }
+
 }
 
 Pole *Oddzial::getPole()  {
@@ -159,6 +163,7 @@ void Oddzial::wycofajWsparcie(Oddzial*) {
 
 void Oddzial::wycofajWsparcie(Tarczownik& wspierajacy) {
     obrona_/=wspierajacy.zmianaObrona();
+
 }
 
 void Oddzial::wycofajWsparcie(Bebniarz& wspierajacy) {
