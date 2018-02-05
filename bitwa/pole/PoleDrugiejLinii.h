@@ -18,6 +18,8 @@ public:
     void przesunSzeregi(Wojsko *wojsko) override;
 
     void przyjmijAtak(Lucznik &lucznik, double d) override;
+
+    void przyjmijAtak(Kusznik &kusznik, double d) override;
 };
 
 

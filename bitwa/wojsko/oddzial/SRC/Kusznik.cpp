@@ -28,12 +28,31 @@ void Kusznik::atakuj(PoleDrugiejLinii linii) {
 }
 
 void Kusznik::przyjmijAtak(double obrazenia) {
-    //TODO
-
+    getPole()->przyjmijAtak(*this,obrazenia);
 }
 
 const void Kusznik::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
+}
+
+void Kusznik::przyjmijAtak(PolePierwszejLinii, double obrazenia) {
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+0.7*getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }
+}
+
+void Kusznik::przyjmijAtak(PoleDrugiejLinii, double obrazenia) {
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+1.0*getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }
 }
 

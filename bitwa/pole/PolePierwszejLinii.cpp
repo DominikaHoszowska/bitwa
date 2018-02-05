@@ -5,6 +5,7 @@
 #include "PolePierwszejLinii.h"
 #include "../wojsko/oddzial/Headers/Oddzial.h"
 #include "../wojsko/Wojsko.h"
+#include "../wojsko/oddzial/Headers/Kusznik.h"
 
 PolePierwszejLinii::PolePierwszejLinii(PoleBitwy *poleBitwy) : Pole(poleBitwy) {
 
@@ -24,4 +25,8 @@ void PolePierwszejLinii::przesunSzeregi(Wojsko *wojsko) {
 
 void PolePierwszejLinii::przyjmijAtak(Lucznik &lucznik, double d) {
     lucznik.przyjmijAtak(*this,d);
+}
+
+void PolePierwszejLinii::przyjmijAtak(Kusznik &kusznik, double obrazenia) {
+    kusznik.przyjmijAtak(*this,obrazenia);
 }

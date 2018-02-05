@@ -20,6 +20,8 @@ public:
     void przyjmijAtak(double obrazenia) override;
 
     const void wypisz() override;
+    void przyjmijAtak(PolePierwszejLinii, double);
+    void przyjmijAtak(PoleDrugiejLinii, double);
 };
 
 

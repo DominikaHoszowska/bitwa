@@ -79,5 +79,9 @@ void Pole::przyjmijAtak(Lucznik&, double) {
 //nie robimy nic
 }
 
+void Pole::przyjmijAtak(Kusznik &, double) {
+//nie robimy nic
+}
+
 
 

@@ -5,7 +5,7 @@
 #include "PoleDrugiejLinii.h"
 #include "../wojsko/Wojsko.h"
 #include "Pole.h"
-
+#include "../wojsko/oddzial/Headers/Kusznik.h"
 PoleDrugiejLinii::PoleDrugiejLinii(PoleBitwy *poleBitwy) : Pole(poleBitwy) {
 
 }
@@ -24,4 +24,8 @@ void PoleDrugiejLinii::przesunSzeregi(Wojsko *wojsko) {
 
 void PoleDrugiejLinii::przyjmijAtak(Lucznik &lucznik, double d) {
     lucznik.przyjmijAtak(*this,d);
+}
+
+void PoleDrugiejLinii::przyjmijAtak(Kusznik &kusznik, double d) {
+    kusznik.przyjmijAtak(*this,d);
 }

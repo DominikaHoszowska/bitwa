@@ -11,6 +11,7 @@ class Wojsko;
 class PoleBitwy;
 class Oddzial;
 class Lucznik;
+class Kusznik;
 class Pole {
 private:
     Oddzial* oddzial_;
@@ -40,6 +41,8 @@ public:
     const void wypisz();
     virtual void przesunSzeregi(Wojsko*);
     virtual void przyjmijAtak(Lucznik&, double);
+    virtual void przyjmijAtak(Kusznik&, double);
+
 };
 
 
