@@ -35,23 +35,30 @@ Pole* PoleBitwy::zwrocPole(uint8_t nrGracza, int nrWiersza, int nrKolumny) {
 }
 
 void PoleBitwy::wypisz() {
-    for(unsigned int nrGracza=0;nrGracza<2;nrGracza++)
-    {
-        for(unsigned int nrWiersza=0;nrWiersza<3;nrWiersza++)
+
+        for( int nrWiersza=2;nrWiersza>=0;nrWiersza--)
         {
            cout<<"            ";
             for (unsigned int nrKolumny=0;nrKolumny<this->gra_->getDlugoscLinii();nrKolumny++)
             {
 
-                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->wypisz();
+                    poleGry_.at(0).at(nrWiersza).at(nrKolumny)->wypisz();
                cout<<" ";
             }
             cout<<std::endl;
         }
-
         this->getGra()->wypiszPrzerywnik();
-    }
+        for(unsigned int nrWiersza=0;nrWiersza<=2;nrWiersza++)
+    {
+        cout<<"            ";
+        for (unsigned int nrKolumny=0;nrKolumny<this->gra_->getDlugoscLinii();nrKolumny++)
+        {
 
+            poleGry_.at(1).at(nrWiersza).at(nrKolumny)->wypisz();
+            cout<<" ";
+        }
+        cout<<std::endl;
+    }
 }
 
 Gra *PoleBitwy::getGra() const {
