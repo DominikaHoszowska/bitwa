@@ -13,15 +13,15 @@ public:
     Kusznik();
     static const char OZNACZENIE= 'k';
 
-    void atakuj(PolePierwszejLinii linii) override;
+    void atakuj(PolePierwszejLinii&) override;
 
-    void atakuj(PoleDrugiejLinii linii) override;
+    void atakuj(PoleDrugiejLinii&) override;
 
     void przyjmijAtak(double obrazenia) override;
 
     const void wypisz() override;
-    void przyjmijAtak(PolePierwszejLinii, double);
-    void przyjmijAtak(PoleDrugiejLinii, double);
+    void przyjmijAtak(PolePierwszejLinii&, double);
+    void przyjmijAtak(PoleDrugiejLinii&, double);
 };
 
 

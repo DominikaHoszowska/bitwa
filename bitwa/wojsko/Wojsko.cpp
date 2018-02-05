@@ -113,7 +113,7 @@ Oddzial* Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pole) {
 
 }
 
-Oddzial *Wojsko::znajdzPrzeciwnika(Oddzial oddzial) {
+Oddzial *Wojsko::znajdzPrzeciwnika(Oddzial& oddzial) {
 
     uint8_t nrPrzeciwnika;
     if(this->gracz_->zwrocIdentyfikator())
@@ -130,7 +130,7 @@ Oddzial *Wojsko::znajdzPrzeciwnika(Oddzial oddzial) {
 
 }
 
-Oddzial *Wojsko::znajdzPrzeciwnika(Lucznik lucznik) {
+Oddzial *Wojsko::znajdzPrzeciwnika(Lucznik& lucznik) {
     uint8_t nrPrzeciwnika;
     if(this->gracz_->zwrocIdentyfikator())
     {
@@ -189,7 +189,7 @@ void Wojsko::przesunSzeregi(Pole *pole) {
     pole->przesunSzeregi(this);
 }
 
-void Wojsko::przesunSzeregi(PolePierwszejLinii pole) {
+void Wojsko::przesunSzeregi(PolePierwszejLinii& pole) {
     if(poleBitwy_->zwrocPole(pole.getNrGracza_(),1,pole.getNrKolumny_())->zwrocOddzial()== nullptr)
     {
         konsoldacjaSzeregow(pole.getNrKolumny_());
@@ -208,7 +208,7 @@ void Wojsko::przesunSzeregi(PolePierwszejLinii pole) {
 
 }
 
-void Wojsko::przesunSzeregi(PoleDrugiejLinii pole) {
+void Wojsko::przesunSzeregi(PoleDrugiejLinii& pole) {
 
     if(poleBitwy_->zwrocPole(pole.getNrGracza_(),2,pole.getNrKolumny_())->zwrocOddzial()== nullptr)
     {

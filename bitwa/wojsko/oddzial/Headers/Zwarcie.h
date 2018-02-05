@@ -8,7 +8,7 @@
 
 class Zwarcie: virtual public Oddzial{
 public:
-    void atakuj(PoleDrugiejLinii linii) override;
+    void atakuj(PoleDrugiejLinii& linii) override;
 };
 
 

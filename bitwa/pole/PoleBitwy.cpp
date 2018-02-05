@@ -62,7 +62,7 @@ void PoleBitwy::setGra(Gra *gra) {
     PoleBitwy::gra_ = gra;
 }
 
-Oddzial *PoleBitwy::znajdzPrzeciwnika(Oddzial atakujacy, uint8_t nrPrzeciwnika) {
+Oddzial *PoleBitwy::znajdzPrzeciwnika(Oddzial& atakujacy, uint8_t nrPrzeciwnika) {
     unsigned int nrKolumny=atakujacy.getPole()->getNrKolumny_();
     if(poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny)->zwrocOddzial()!= nullptr)
     {
@@ -85,7 +85,7 @@ Oddzial *PoleBitwy::znajdzPrzeciwnika(Oddzial atakujacy, uint8_t nrPrzeciwnika) 
     return nullptr;
 }
 
-Oddzial *PoleBitwy::znajdzPrzeciwnika(Lucznik atakujacy, uint8_t nrPrzeciwnika ) {
+Oddzial *PoleBitwy::znajdzPrzeciwnika(Lucznik& atakujacy, uint8_t nrPrzeciwnika ) {
     unsigned int nrKolumny=atakujacy.getPole()->getNrKolumny_();
     if(poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny)->zwrocOddzial()!= nullptr)
     {

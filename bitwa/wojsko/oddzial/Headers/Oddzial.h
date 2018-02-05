@@ -81,14 +81,14 @@ public:
     void setZasieg_(int zasieg_);
 
     void dodajWspierajacego(Wsparcie* wsparcie);
-    virtual void atakuj(PolePierwszejLinii);
-    virtual void atakuj(PoleDrugiejLinii);
+    virtual void atakuj(PolePierwszejLinii&);
+    virtual void atakuj(PoleDrugiejLinii&);
     virtual const void wypisz();
     void wypiszLiczebnosc();
     virtual ~Oddzial()= default;
     virtual void wycofajWsparcie(Oddzial*);
-    virtual void wycofajWsparcie(Tarczownik);
-    virtual void wycofajWsparcie(Bebniarz);
+    virtual void wycofajWsparcie(Tarczownik&);
+    virtual void wycofajWsparcie(Bebniarz&);
     void przeliczStraty();
     void likwidacja();
     void ustawPole(Pole*);

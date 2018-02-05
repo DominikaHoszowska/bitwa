@@ -16,7 +16,7 @@ Halabardzista::Halabardzista():Oddzial(),Zwarcie() {
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 
-void Halabardzista::atakuj(PolePierwszejLinii pole) {
+void Halabardzista::atakuj(PolePierwszejLinii& pole) {
     Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
     if(przeciwnik!= nullptr)
     {

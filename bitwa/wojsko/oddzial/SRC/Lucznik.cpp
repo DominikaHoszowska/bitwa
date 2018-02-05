@@ -14,7 +14,7 @@ Lucznik::Lucznik() :Oddzial(), Zasiegowa()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=5;
 }
-void Lucznik::atakuj(PolePierwszejLinii linii) {
+void Lucznik::atakuj(PolePierwszejLinii& linii) {
     Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
     if(przeciwnik!= nullptr)
     {
@@ -22,7 +22,7 @@ void Lucznik::atakuj(PolePierwszejLinii linii) {
     }
 }
 
-void Lucznik::atakuj(PoleDrugiejLinii linii) {
+void Lucznik::atakuj(PoleDrugiejLinii& linii) {
     Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
     if(przeciwnik!= nullptr)
     {
@@ -39,7 +39,7 @@ const void Lucznik::wypisz() {
     wypiszLiczebnosc();
 }
 
-void Lucznik::przyjmijAtak(PolePierwszejLinii, double obrazenia) {
+void Lucznik::przyjmijAtak(PolePierwszejLinii&, double obrazenia) {
 
     double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
                   /getWytrzymalosc_()/(1+0.5*getObrona_());
@@ -50,7 +50,7 @@ void Lucznik::przyjmijAtak(PolePierwszejLinii, double obrazenia) {
     }
 }
 
-void Lucznik::przyjmijAtak(PoleDrugiejLinii, double obrazenia) {
+void Lucznik::przyjmijAtak(PoleDrugiejLinii&, double obrazenia) {
     double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
                   /getWytrzymalosc_()/(1+getObrona_());
     if(straty>0)

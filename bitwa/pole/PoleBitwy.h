@@ -28,9 +28,9 @@ public:
     Gra* getGra() const;
 
     void setGra(Gra *gra);
-    virtual Oddzial* znajdzPrzeciwnika(Oddzial, uint8_t);
+    virtual Oddzial* znajdzPrzeciwnika(Oddzial&, uint8_t);
 
-    virtual Oddzial* znajdzPrzeciwnika(Lucznik, uint8_t);
+    virtual Oddzial* znajdzPrzeciwnika(Lucznik&, uint8_t);
 
 };
 

@@ -16,7 +16,7 @@ Miecznik::Miecznik(): Oddzial(), Zwarcie()
     zasieg_=1;
 }
 
-void Miecznik::atakuj(PolePierwszejLinii linii) {
+void Miecznik::atakuj(PolePierwszejLinii& linii) {
 
     Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
     if(przeciwnik!= nullptr)

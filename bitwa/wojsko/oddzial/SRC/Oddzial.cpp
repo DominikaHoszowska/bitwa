@@ -117,11 +117,11 @@ void Oddzial::atakuj() {
     getPole()->czyMogeAtakowac(this);
 }
 
-void Oddzial::atakuj(PolePierwszejLinii) {
+void Oddzial::atakuj(PolePierwszejLinii&) {
 
 }
 
-void Oddzial::atakuj(PoleDrugiejLinii) {
+void Oddzial::atakuj(PoleDrugiejLinii&) {
 
 }
 
@@ -159,11 +159,11 @@ void Oddzial::wycofajWsparcie(Oddzial *oddzial) {
 
 }
 
-void Oddzial::wycofajWsparcie(Tarczownik wspierajacy) {
+void Oddzial::wycofajWsparcie(Tarczownik& wspierajacy) {
     obrona_/=wspierajacy.zmianaObrona();
 }
 
-void Oddzial::wycofajWsparcie(Bebniarz wspierajacy) {
+void Oddzial::wycofajWsparcie(Bebniarz& wspierajacy) {
     morale_/=wspierajacy.zmianaMorale();
 }
 

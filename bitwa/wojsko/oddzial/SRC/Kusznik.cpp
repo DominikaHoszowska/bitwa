@@ -15,7 +15,7 @@ Kusznik::Kusznik(): Oddzial(),Zasiegowa(){
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 
-void Kusznik::atakuj(PolePierwszejLinii linii) {
+void Kusznik::atakuj(PolePierwszejLinii& linii) {
     Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
     if(przeciwnik!= nullptr)
     {
@@ -23,7 +23,7 @@ void Kusznik::atakuj(PolePierwszejLinii linii) {
     }
 }
 
-void Kusznik::atakuj(PoleDrugiejLinii linii) {
+void Kusznik::atakuj(PoleDrugiejLinii& linii) {
     Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
     if(przeciwnik!= nullptr)
     {
@@ -40,7 +40,7 @@ const void Kusznik::wypisz() {
     wypiszLiczebnosc();
 }
 
-void Kusznik::przyjmijAtak(PolePierwszejLinii, double obrazenia) {
+void Kusznik::przyjmijAtak(PolePierwszejLinii&, double obrazenia) {
     double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
                   /getWytrzymalosc_()/(1+0.7*getObrona_());
     if(straty>0)
@@ -50,7 +50,7 @@ void Kusznik::przyjmijAtak(PolePierwszejLinii, double obrazenia) {
     }
 }
 
-void Kusznik::przyjmijAtak(PoleDrugiejLinii, double obrazenia) {
+void Kusznik::przyjmijAtak(PoleDrugiejLinii&, double obrazenia) {
     double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
                   /getWytrzymalosc_()/(1+1.0*getObrona_());
     if(straty>0)

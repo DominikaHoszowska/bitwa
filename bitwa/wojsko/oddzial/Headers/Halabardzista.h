@@ -12,7 +12,7 @@ class Halabardzista: public Zwarcie {
 public:
     Halabardzista();
     static const char OZNACZENIE = 'H';
-    void atakuj(PolePierwszejLinii linii) override;
+    void atakuj(PolePierwszejLinii& linii) override;
     const void wypisz() override;
 
     void atakuj(Konny &konny) override;

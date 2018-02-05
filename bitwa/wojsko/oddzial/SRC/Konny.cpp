@@ -16,7 +16,7 @@ Konny::Konny(): Oddzial(),Zwarcie(){
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 
-void Konny::atakuj(PolePierwszejLinii linii) {
+void Konny::atakuj(PolePierwszejLinii& linii) {
     Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
     if(przeciwnik!= nullptr)
     {
