@@ -3,3 +3,7 @@
 //
 
 #include "../Headers/Zasiegowa.h"
+
+void Zasiegowa::przyjmijAtakW(Oddzial *oddzial) {
+    oddzial->atakuj(*this);
+}

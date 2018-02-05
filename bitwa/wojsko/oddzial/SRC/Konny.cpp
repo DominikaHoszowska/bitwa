@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "../Headers/Konny.h"
-
+#include "../../Wojsko.h"
 
 
 Konny::Konny(): Oddzial(),Zwarcie(){
@@ -17,8 +17,12 @@ Konny::Konny(): Oddzial(),Zwarcie(){
 }
 
 void Konny::atakuj(PolePierwszejLinii linii) {
-    //TODO
+    Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
+    if(przeciwnik!= nullptr)
+    {
+        przeciwnik->przyjmijAtakW(this);
 
+    }
 }
 
 void Konny::przyjmijAtak(double obrazenia) {
@@ -40,4 +44,14 @@ const void Konny::wypisz() {
 
 void Konny::przyjmijAtakW(Oddzial *oddzial) {
     oddzial->atakuj(*this);
+}
+
+void Konny::atakuj(Zasiegowa &przeciwnik) {
+    przeciwnik.przyjmijAtak((1+1.25*getSilaAtaku_())*getLiczebnoscOddzialu_());
+
+}
+
+void Konny::atakuj(Oddzial &przeciwnik) {
+    przeciwnik.przyjmijAtak((1+getSilaAtaku_())*getLiczebnoscOddzialu_());
+
 }

@@ -213,5 +213,9 @@ void Oddzial::atakuj(Oddzial &) {
 
 }
 
+void Oddzial::atakuj(Zasiegowa &) {
+
+}
+
 
 

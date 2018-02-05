@@ -9,7 +9,8 @@
 #include "Oddzial.h"
 
 class Zasiegowa: virtual public Oddzial{
-
+public:
+    void przyjmijAtakW(Oddzial *oddzial) override;
 };
 
 

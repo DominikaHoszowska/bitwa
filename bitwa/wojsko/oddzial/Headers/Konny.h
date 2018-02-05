@@ -20,6 +20,10 @@ public:
     const void wypisz() override;
 
     void przyjmijAtakW(Oddzial *oddzial) override;
+
+    void atakuj(Zasiegowa &zasiegowa) override;
+
+    void atakuj(Oddzial &oddzial) override;
 };
 
 

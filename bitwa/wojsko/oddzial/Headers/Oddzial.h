@@ -17,6 +17,7 @@ class Wsparcie;
 class Tarczownik;
 class Bebniarz;
 class Konny;
+class Zasiegowa;
 
 class Oddzial {
 public:
@@ -97,6 +98,7 @@ public:
 
     virtual void atakuj(Konny&);
     virtual void atakuj(Oddzial&);
+    virtual void atakuj(Zasiegowa&);
 
 
 };
