@@ -25,7 +25,7 @@ public:
 
     Gra* getGra() const;
 
-    void setGra(Gra *gra_);
+    void setGra(Gra *gra);
 };
 
 

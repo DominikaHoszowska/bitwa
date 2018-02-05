@@ -13,6 +13,7 @@
 #include "oddzial/Headers/Bebniarz.h"
 #include "oddzial/Headers/Miecznik.h"
 #include "../pole/Pole.h"
+#include "../Gra.h"
 
 
 Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* poleBitwy) :
@@ -56,7 +57,6 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy* 
             poleBitwy_->ustawOddzial(gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny, oddzial);
         }
     }
-
 }
 
 bool Wojsko::czyPuste() {
@@ -96,12 +96,19 @@ Oddzial* Wojsko::wskazKogoWspierac(const Pole &pole ) {
 }
 
 Oddzial* Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pole) {
+   PoleBitwy* poleBitwy=poleBitwy_;//TODO blad ochrony pamieci
+    Gra* gra=poleBitwy->getGra();
+    unsigned int dlugoscLinii=gra->getDlugoscLinii();
+    if(pole.getNrKolumny_()>0)
+    {
     if(poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1)!= nullptr) {
         return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() - 1)->zwrocOddzial();
     }
+    }
+    if(pole.getNrKolumny_()<(dlugoscLinii-1)){
     if(poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() + 1)!= nullptr) {
         return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_() + 1)->zwrocOddzial();
-    }
+    }}
     return poleBitwy_->zwrocPole(pole.getNrGracza_(), 0, pole.getNrKolumny_())->zwrocOddzial();
 
 }
@@ -126,8 +133,35 @@ void Wojsko::przeliczStraty() {
 }
 
 void Wojsko::likwidacjaZmianaMorale(Pole *pole) {
-    //TODO
+    if(pole->getNrKolumny_()>0)
+    {
+        for(unsigned int nrWiersza=0;nrWiersza<3;nrWiersza++)
+        {
+            if(poleBitwy_->zwrocPole(pole->getNrGracza_(),nrWiersza,pole->getNrKolumny_()-1)->zwrocOddzial()!= nullptr)
+            {
+                poleBitwy_->zwrocPole(pole->getNrGracza_(),nrWiersza,pole->getNrKolumny_()-1)->zwrocOddzial()->zmniejszMorale();
+            }
+        }
+    }
+    for(unsigned int nrWiersza=0;nrWiersza<3;nrWiersza++)
+    {
+        if(poleBitwy_->zwrocPole(pole->getNrGracza_(),nrWiersza,pole->getNrKolumny_())!=pole &&
+                poleBitwy_->zwrocPole(pole->getNrGracza_(),nrWiersza,pole->getNrKolumny_())->zwrocOddzial()!= nullptr)
+        {
+            poleBitwy_->zwrocPole(pole->getNrGracza_(),nrWiersza,pole->getNrKolumny_())->zwrocOddzial()->zmniejszMorale();
+        }
+    }
+    if (pole->getNrKolumny_()<poleBitwy_->getGra()->getDlugoscLinii()-1)
+    {
+        for(unsigned int nrWiersza=0;nrWiersza<3;nrWiersza++)
+        {
+            if(poleBitwy_->zwrocPole(pole->getNrGracza_(),nrWiersza,pole->getNrKolumny_()+1)->zwrocOddzial()!= nullptr)
+            {
+                poleBitwy_->zwrocPole(pole->getNrGracza_(),nrWiersza,pole->getNrKolumny_()+1)->zwrocOddzial()->zmniejszMorale();
+            }
+        }
 
+    }
 }
 
 void Wojsko::przesunSzeregi(Pole *pole) {

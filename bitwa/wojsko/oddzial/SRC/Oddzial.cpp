@@ -187,5 +187,14 @@ void Oddzial::ustawPole(Pole * pole) {
     pole_=pole;
 }
 
+void Oddzial::zmniejszMorale() {
+    if(morale_<-1||morale_>1)
+    {
+        morale_*=0.75;
+        return;
+    }
+    morale_-=0.25;
+}
+
 
 

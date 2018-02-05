@@ -58,6 +58,6 @@ Gra *PoleBitwy::getGra() const {
     return gra_;
 }
 
-void PoleBitwy::setGra(Gra *gra_) {
-    PoleBitwy::gra_ = gra_;
+void PoleBitwy::setGra(Gra *gra) {
+    PoleBitwy::gra_ = gra;
 }
