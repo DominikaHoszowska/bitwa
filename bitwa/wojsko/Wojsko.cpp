@@ -217,8 +217,20 @@ void Wojsko::konsoldacjaSzeregow(unsigned int nrKolumny) {
     konsoldacjaSzeregowDrugaPolowa(nrKolumny);
 }
 
-void Wojsko::konsoldacjaSzeregowPierwszaPolowa(unsigned int) {
+void Wojsko::konsoldacjaSzeregowPierwszaPolowa(unsigned int nrKolumny) {
 
+    if(nrKolumny==0)
+    {
+        return;
+    }
+    for(unsigned int nrWiersza=0;nrWiersza<=2;nrWiersza++)
+    {
+        poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny)
+                ->ustawOddzial(poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza,
+                                                     nrKolumny-1)->zwrocOddzial());
+        poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny-1)->ustawOddzial(nullptr);
+    }
+    konsoldacjaSzeregowDrugaPolowa(nrKolumny-1);
 }
 
 void Wojsko::konsoldacjaSzeregowDrugaPolowa(unsigned int nrKolumny) {
