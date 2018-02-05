@@ -31,10 +31,31 @@ void Lucznik::atakuj(PoleDrugiejLinii linii) {
 }
 
 void Lucznik::przyjmijAtak(double obrazenia) {
-    //TODO
+    getPole()->przyjmijAtak(*this,obrazenia);
 }
 
 const void Lucznik::wypisz() {
     std::cout<<this->OZNACZENIE;
     wypiszLiczebnosc();
+}
+
+void Lucznik::przyjmijAtak(PolePierwszejLinii, double obrazenia) {
+
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+0.5*getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }
+}
+
+void Lucznik::przyjmijAtak(PoleDrugiejLinii, double obrazenia) {
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }
 }

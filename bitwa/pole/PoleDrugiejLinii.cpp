@@ -21,3 +21,7 @@ void PoleDrugiejLinii::czyMogeAtakowac(Oddzial *oddzial) {
 void PoleDrugiejLinii::przesunSzeregi(Wojsko *wojsko) {
     wojsko->przesunSzeregi(*this);
 }
+
+void PoleDrugiejLinii::przyjmijAtak(Lucznik &lucznik, double d) {
+    lucznik.przyjmijAtak(*this,d);
+}

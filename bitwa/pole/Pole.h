@@ -10,7 +10,7 @@
 class Wojsko;
 class PoleBitwy;
 class Oddzial;
-
+class Lucznik;
 class Pole {
 private:
     Oddzial* oddzial_;
@@ -39,6 +39,7 @@ public:
     virtual void czyMogeAtakowac(Oddzial*);
     const void wypisz();
     virtual void przesunSzeregi(Wojsko*);
+    virtual void przyjmijAtak(Lucznik&, double);
 };
 
 

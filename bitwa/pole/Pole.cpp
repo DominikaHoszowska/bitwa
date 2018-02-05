@@ -75,5 +75,9 @@ void Pole::przesunSzeregi(Wojsko * wojsko) {
 
 }
 
+void Pole::przyjmijAtak(Lucznik&, double) {
+//nie robimy nic
+}
+
 
 
