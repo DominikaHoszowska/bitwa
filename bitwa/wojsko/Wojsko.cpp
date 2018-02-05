@@ -244,9 +244,9 @@ void Wojsko::konsoldacjaSzeregowDrugaPolowa(unsigned int nrKolumny) {
     if (nrKolumny != poleBitwy_->getGra()->getDlugoscLinii() / 2) {
         for (unsigned int nrWiersza = 0; nrWiersza <= 2; nrWiersza++) {
 
-            poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny - 1)
+            poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny)
                     ->ustawOddzial(poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza,
-                                                         nrKolumny)->zwrocOddzial());
+                                                         nrKolumny+1)->zwrocOddzial());
             poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny)->ustawOddzial(nullptr);
 
 
