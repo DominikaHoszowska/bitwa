@@ -126,7 +126,13 @@ void Oddzial::atakuj(PoleDrugiejLinii) {
 }
 
 void Oddzial::przyjmijAtak(double obrazenia) {
-//TODO
+    double straty=obrazenia*(1-2*getMorale()/(1-getMorale()))
+                  /getWytrzymalosc_()/(1+getObrona_());
+    if(straty>0)
+    {
+        straty+=getStraty();
+        setStraty(straty);
+    }
 }
 
 const void Oddzial::wypisz() {

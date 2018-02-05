@@ -24,7 +24,11 @@ void Kusznik::atakuj(PolePierwszejLinii linii) {
 }
 
 void Kusznik::atakuj(PoleDrugiejLinii linii) {
-    //TODO
+    Oddzial* przeciwnik=getWojsko()->znajdzPrzeciwnika(*this);
+    if(przeciwnik!= nullptr)
+    {
+        przeciwnik->przyjmijAtak((1+getSilaAtaku_())*getLiczebnoscOddzialu_());
+    }
 }
 
 void Kusznik::przyjmijAtak(double obrazenia) {
