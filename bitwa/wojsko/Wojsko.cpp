@@ -143,7 +143,7 @@ void Wojsko::przeliczStraty() {
 
 void Wojsko::likwidacjaZmianaMorale(Pole *pole) {
     if (pole->getNrKolumny_() > 0) {
-        for (unsigned int nrWiersza = 0; nrWiersza < 3; nrWiersza++) {
+        for (unsigned int nrWiersza = 0; nrWiersza < 2; nrWiersza++) {
             if (poleBitwy_->zwrocPole(pole->getNrGracza_(), nrWiersza, pole->getNrKolumny_() - 1)->zwrocOddzial() !=
                 nullptr) {
                 poleBitwy_->zwrocPole(pole->getNrGracza_(), nrWiersza,
@@ -151,7 +151,7 @@ void Wojsko::likwidacjaZmianaMorale(Pole *pole) {
             }
         }
     }
-    for (unsigned int nrWiersza = 0; nrWiersza < 3; nrWiersza++) {
+    for (unsigned int nrWiersza = 0; nrWiersza < 2; nrWiersza++) {
         if (poleBitwy_->zwrocPole(pole->getNrGracza_(), nrWiersza, pole->getNrKolumny_()) != pole &&
             poleBitwy_->zwrocPole(pole->getNrGracza_(), nrWiersza, pole->getNrKolumny_())->zwrocOddzial() != nullptr) {
             poleBitwy_->zwrocPole(pole->getNrGracza_(), nrWiersza,
@@ -159,7 +159,7 @@ void Wojsko::likwidacjaZmianaMorale(Pole *pole) {
         }
     }
     if (pole->getNrKolumny_() < poleBitwy_->getGra()->getDlugoscLinii() - 1) {
-        for (unsigned int nrWiersza = 0; nrWiersza < 3; nrWiersza++) {
+        for (unsigned int nrWiersza = 0; nrWiersza < 2; nrWiersza++) {
             if (poleBitwy_->zwrocPole(pole->getNrGracza_(), nrWiersza, pole->getNrKolumny_() + 1)->zwrocOddzial() !=
                 nullptr) {
                 poleBitwy_->zwrocPole(pole->getNrGracza_(), nrWiersza,

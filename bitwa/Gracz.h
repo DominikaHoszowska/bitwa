@@ -23,10 +23,12 @@ public:
     void wyslijWsparcie();
     void wykonajAtak();
     void wycofajWsparcie();
-    void zakonczTure();
+    void przeliczStraty();
     bool czyPuste();
     uint8_t zwrocIdentyfikator();
     ~Gracz() = default;
+
+     Wojsko &getWojsko_() ;
 };
 
 

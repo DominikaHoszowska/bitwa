@@ -51,8 +51,10 @@ void Gra::rozegrajTure() {
     pierwszyGracz_.wycofajWsparcie();
     drugiGracz_.wycofajWsparcie();
 
-    pierwszyGracz_.zakonczTure();
-    drugiGracz_.zakonczTure();
+    pierwszyGracz_.przeliczStraty();
+    drugiGracz_.przeliczStraty();
+    poleBitwy_.zmianaMorale();
+    poleBitwy_.usunPoleglych();
     wypisz();
 
 }
@@ -76,4 +78,12 @@ void Gra::wypiszPrzerywnik()
 
 unsigned int Gra::getDlugoscLinii() const {
     return dlugoscLinii_;
+}
+
+ Gracz &Gra::getPierwszyGracz_()  {
+    return pierwszyGracz_;
+}
+
+Gracz &Gra::getDrugiGracz_()  {
+    return drugiGracz_;
 }

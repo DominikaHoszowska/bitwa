@@ -5,6 +5,7 @@
 #include <iostream>
 #include "PoleBitwy.h"
 #include "../Gra.h"
+#include "../wojsko/Wojsko.h"
 using std::cout;
 PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):
         poleGry_(2, wojsko_t(3))
@@ -134,4 +135,36 @@ Oddzial *PoleBitwy::znajdzPrzeciwnika(Lucznik& atakujacy, uint8_t nrPrzeciwnika 
     }
     return nullptr;
 
+}
+
+void PoleBitwy::zmianaMorale() {
+
+    for(unsigned int nrGracza=0;nrGracza<2;nrGracza++)
+    {
+        for(unsigned int nrWiersza=0;nrWiersza<2;nrWiersza++)
+        {
+            for(unsigned int nrKolumny=0;nrKolumny<getGra()->getDlugoscLinii();nrKolumny++)
+            {
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr
+                   && poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()->getStraty()>
+                                                 poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()->getLiczebnoscOddzialu_())
+                {
+                    if(nrGracza==0)
+                    {
+                        getGra()->getPierwszyGracz_().getWojsko_().likwidacjaZmianaMorale(zwrocPole(nrGracza,nrWiersza,nrKolumny));
+                    }
+                    else
+                    {
+                        getGra()->getDrugiGracz_().getWojsko_().likwidacjaZmianaMorale(zwrocPole(nrGracza,nrWiersza,nrKolumny));
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+void PoleBitwy::usunPoleglych() {
+    //TODO
 }

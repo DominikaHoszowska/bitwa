@@ -24,7 +24,7 @@ void Gracz::wycofajWsparcie() {
     wojsko_.wycofajWsparcie();
 }
 
-void Gracz::zakonczTure() {
+void Gracz::przeliczStraty() {
     wojsko_.przeliczStraty();
 
 }
@@ -35,4 +35,8 @@ uint8_t Gracz::zwrocIdentyfikator() {
 
 bool Gracz::czyPuste() {
     return wojsko_.czyPuste();
+}
+
+ Wojsko &Gracz::getWojsko_()  {
+    return wojsko_;
 }

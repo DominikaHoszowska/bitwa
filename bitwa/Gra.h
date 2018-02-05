@@ -28,6 +28,9 @@ public:
 
     unsigned int getDlugoscLinii() const;
 
+     Gracz &getPierwszyGracz_() ;
+
+     Gracz &getDrugiGracz_() ;
 };
 
 

@@ -176,14 +176,8 @@ void Oddzial::przeliczStraty() {
         int straty=(int)straty_;
         straty_=0;
         morale_-=straty/liczebnoscOddzialu_;
-        if(straty>liczebnoscOddzialu_)
-        {
-            likwidacja();
-            return;
-        }
         liczebnoscOddzialu_-=straty;
-
-    }
+}
 }
 
 void Oddzial::likwidacja() {
