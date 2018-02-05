@@ -14,6 +14,8 @@ public:
     Oddzial* kogoWspierac(Wojsko *wojsko) override;
 
     void czyMogeAtakowac(Oddzial *oddzial) override;
+
+    void przesunSzeregi(Wojsko *wojsko) override;
 };
 
 

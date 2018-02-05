@@ -17,3 +17,7 @@ Oddzial* PoleDrugiejLinii::kogoWspierac(Wojsko *wojsko) {
 void PoleDrugiejLinii::czyMogeAtakowac(Oddzial *oddzial) {
     oddzial->atakuj(*this);
 }
+
+void PoleDrugiejLinii::przesunSzeregi(Wojsko *wojsko) {
+    wojsko->przesunSzeregi(*this);
+}

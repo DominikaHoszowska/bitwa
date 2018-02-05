@@ -166,6 +166,42 @@ void Wojsko::likwidacjaZmianaMorale(Pole *pole) {
 
 void Wojsko::przesunSzeregi(Pole *pole) {
     delete pole->getOddzial();
+    pole->ustawOddzial(nullptr);
+    pole->przesunSzeregi(this);
+}
+
+void Wojsko::przesunSzeregi(PolePierwszejLinii pole) {
+    if(poleBitwy_->zwrocPole(pole.getNrGracza_(),1,pole.getNrKolumny_())->zwrocOddzial()== nullptr)
+    {
+        konsoldacjaSzeregow(pole.getNrKolumny_());
+        return;
+    }
+    poleBitwy_->zwrocPole(pole.getNrGracza_(),1,pole.getNrKolumny_())->zwrocOddzial()->przeliczStraty();
+
+    if(poleBitwy_->zwrocPole(pole.getNrGracza_(),1,pole.getNrKolumny_())->zwrocOddzial()== nullptr)
+    {
+        konsoldacjaSzeregow(pole.getNrKolumny_());
+        return;
+    }
+    pole.ustawOddzial(poleBitwy_->zwrocPole(pole.getNrGracza_(),1,pole.getNrKolumny_())->zwrocOddzial());
+    poleBitwy_->zwrocPole(pole.getNrGracza_(),1,pole.getNrKolumny_())->ustawOddzial(nullptr);
+    poleBitwy_->zwrocPole(pole.getNrGracza_(),1,pole.getNrKolumny_())->przesunSzeregi(this);
+
+}
+
+void Wojsko::przesunSzeregi(PoleDrugiejLinii pole) {
+
+    if(poleBitwy_->zwrocPole(pole.getNrGracza_(),2,pole.getNrKolumny_())->zwrocOddzial()== nullptr)
+    {
+        return;
+    }
+
+
+
+
+}
+
+void Wojsko::konsoldacjaSzeregow(unsigned int nrKolumny) {
     //TODO
 
 }

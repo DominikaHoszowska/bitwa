@@ -38,6 +38,7 @@ public:
     unsigned int getNrKolumny_() const;
     virtual void czyMogeAtakowac(Oddzial*);
     const void wypisz();
+    virtual void przesunSzeregi(Wojsko*);
 };
 
 

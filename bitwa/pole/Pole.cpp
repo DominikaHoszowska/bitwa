@@ -71,5 +71,9 @@ Oddzial *Pole::kogoWspierac(Wojsko *wojsko) {
     return nullptr;
 }
 
+void Pole::przesunSzeregi(Wojsko * wojsko) {
+
+}
+
 
 
