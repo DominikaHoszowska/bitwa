@@ -9,7 +9,6 @@ Gracz::Gracz(const uint8_t numerGracza, std::vector<std::vector<char>> wojsko, P
         numerGracza_(numerGracza),
         wojsko_(this, wojsko, poleBitwy)
 {
-    //TODO
 }
 
 void Gracz::wyslijWsparcie() {

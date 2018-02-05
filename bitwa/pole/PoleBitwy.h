@@ -4,6 +4,8 @@
 #include "PolePosilkow.h"
 #include "PoleDrugiejLinii.h"
 #include "PolePierwszejLinii.h"
+#include "../wojsko/oddzial/Headers/Lucznik.h"
+
 class Gra;
 
 class PoleBitwy {
@@ -26,6 +28,10 @@ public:
     Gra* getGra() const;
 
     void setGra(Gra *gra);
+    virtual Oddzial* znajdzPrzeciwnika(Oddzial, uint8_t);
+
+    virtual Oddzial* znajdzPrzeciwnika(Lucznik, uint8_t);
+
 };
 
 

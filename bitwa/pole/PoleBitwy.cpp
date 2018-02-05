@@ -61,3 +61,67 @@ Gra *PoleBitwy::getGra() const {
 void PoleBitwy::setGra(Gra *gra) {
     PoleBitwy::gra_ = gra;
 }
+
+Oddzial *PoleBitwy::znajdzPrzeciwnika(Oddzial atakujacy, uint8_t nrPrzeciwnika) {
+    unsigned int nrKolumny=atakujacy.getPole()->getNrKolumny_();
+    if(poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny)->zwrocOddzial()!= nullptr)
+    {
+        return poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny)->zwrocOddzial();
+    }
+    unsigned int zasieg=atakujacy.getZasieg_();
+    unsigned int odleglosc=1;
+    while(odleglosc<=zasieg)
+    {
+        if(nrKolumny-odleglosc>=0&&poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny-odleglosc)->zwrocOddzial()!= nullptr)
+        {
+            return poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny-odleglosc)->zwrocOddzial();
+        }
+        if(nrKolumny+odleglosc<getGra()->getDlugoscLinii()&& poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny+odleglosc)->zwrocOddzial()!= nullptr)
+        {
+            return poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny+odleglosc)->zwrocOddzial();
+        }
+        odleglosc++;
+    }
+    return nullptr;
+}
+
+Oddzial *PoleBitwy::znajdzPrzeciwnika(Lucznik atakujacy, uint8_t nrPrzeciwnika ) {
+    unsigned int nrKolumny=atakujacy.getPole()->getNrKolumny_();
+    if(poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny)->zwrocOddzial()!= nullptr)
+    {
+        return poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny)->zwrocOddzial();
+    }
+    unsigned int zasieg=atakujacy.getZasieg_();
+    unsigned int odleglosc=1;
+    while(odleglosc<=zasieg)
+    {
+        if(nrKolumny-odleglosc>=0&&poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny-odleglosc)->zwrocOddzial()!= nullptr)
+        {
+            return poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny-odleglosc)->zwrocOddzial();
+        }
+        if(nrKolumny+odleglosc<getGra()->getDlugoscLinii()&& poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny+odleglosc)->zwrocOddzial()!= nullptr)
+        {
+            return poleGry_.at(nrPrzeciwnika).at(1).at(nrKolumny+odleglosc)->zwrocOddzial();
+        }
+        odleglosc++;
+    }
+    if(poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny)->zwrocOddzial()!= nullptr)
+    {
+        return poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny)->zwrocOddzial();
+    }
+    odleglosc=1;
+    while(odleglosc<=zasieg)
+    {
+        if(nrKolumny-odleglosc>=0&&poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny-odleglosc)->zwrocOddzial()!= nullptr)
+        {
+            return poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny-odleglosc)->zwrocOddzial();
+        }
+        if(nrKolumny+odleglosc<getGra()->getDlugoscLinii()&& poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny+odleglosc)->zwrocOddzial()!= nullptr)
+        {
+            return poleGry_.at(nrPrzeciwnika).at(0).at(nrKolumny+odleglosc)->zwrocOddzial();
+        }
+        odleglosc++;
+    }
+    return nullptr;
+
+}

@@ -84,7 +84,7 @@ void Wojsko::wycofajWsparcie() {
     }
 }
 
-Oddzial* Wojsko::wskazKogoWspierac(Wsparcie *wsparcie) {//TODO probelem z naruszeniem pamieci
+Oddzial* Wojsko::wskazKogoWspierac(Wsparcie *wsparcie) {
 
 
     return   wsparcie->getPole()->kogoWspierac(this);
@@ -113,16 +113,35 @@ Oddzial* Wojsko::wskazKogoWspierac(const PolePierwszejLinii &pole) {
 
 }
 
-Oddzial *Wojsko::znajdzPrzeciwnika(Oddzial) {
-    //TODO
-    return nullptr;
+Oddzial *Wojsko::znajdzPrzeciwnika(Oddzial oddzial) {
+
+    uint8_t nrPrzeciwnika;
+    if(this->gracz_->zwrocIdentyfikator())
+    {
+        nrPrzeciwnika=0;
+
+    }
+    else
+    {
+        nrPrzeciwnika=1;
+    }
+    return this->poleBitwy_->znajdzPrzeciwnika( oddzial, nrPrzeciwnika);
+
 
 }
 
-Oddzial *Wojsko::znajdzPrzeciwnika(Lucznik) {
-    //TODO
+Oddzial *Wojsko::znajdzPrzeciwnika(Lucznik lucznik) {
+    uint8_t nrPrzeciwnika;
+    if(this->gracz_->zwrocIdentyfikator())
+    {
+        nrPrzeciwnika=0;
 
-    return nullptr;
+    }
+    else
+    {
+        nrPrzeciwnika=1;
+    }
+    return this->poleBitwy_->znajdzPrzeciwnika( lucznik, nrPrzeciwnika);
 }
 
 void Wojsko::przeliczStraty() {
