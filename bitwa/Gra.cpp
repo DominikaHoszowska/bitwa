@@ -23,12 +23,12 @@ bool Gra::czyKoniec() {
 
     if(pierwszyGracz_.czyPuste())
     {
-        std::cout<<"Wygrał drugi gracz!!!";
+        std::cout<<"Wygral drugi gracz!!!";
         return true;
     }
     if(drugiGracz_.czyPuste())
     {
-        std::cout<<"Wygrał pierwszy gracz!!!";
+        std::cout<<"Wygral pierwszy gracz!!!";
         return true;
     }
     if(nrTury_==liczbaTur_)
