@@ -33,6 +33,8 @@ public:
     virtual Oddzial* znajdzPrzeciwnika(Lucznik&, uint8_t);
     void zmianaMorale();
     void usunPoleglych();
+    void usunPoleglych1(int);
+    void usunPoleglych2(int);
 
 };
 

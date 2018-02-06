@@ -166,5 +166,26 @@ void PoleBitwy::zmianaMorale() {
 }
 
 void PoleBitwy::usunPoleglych() {
-    //TODO
+    usunPoleglych1(0);
+    usunPoleglych2(0);
+    usunPoleglych1(1);
+    usunPoleglych2(1);
+}
+
+void PoleBitwy::usunPoleglych1(int nrGracza) {
+
+    for(unsigned int nrKolumny=(getGra()->getDlugoscLinii()/2)-1;nrKolumny>0;nrKolumny--)
+    {
+        //TODO
+    }
+}
+
+void PoleBitwy::usunPoleglych2(int nrGracza) {
+    for(unsigned int nrKolumny=(getGra()->getDlugoscLinii()/2);nrKolumny<getGra()->getDlugoscLinii();nrKolumny++)
+    {
+        //TODO
+
+    }
+
+
 }
