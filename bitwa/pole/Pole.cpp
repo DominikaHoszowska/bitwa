@@ -57,7 +57,7 @@ const void Pole::wypisz() {
         getOddzial()->wypisz();
     else
     {
-        std::cout<<" X ";
+        std::cout<<" X  ";
     }
 }
 

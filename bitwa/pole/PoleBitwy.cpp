@@ -189,11 +189,15 @@ void PoleBitwy::usunPoleglych1(int nrGracza) {
         }
 
     }
-    for( int nrKolumny=(int)(getGra()->getDlugoscLinii()/2)-1;nrKolumny>0;nrKolumny--) {
+    for( int nrKolumny=(int)(getGra()->getDlugoscLinii()/2)-1;nrKolumny>=0;nrKolumny--) {
         if (zwrocPole(nrGracza, 1, nrKolumny)->zwrocOddzial()!= nullptr &&
                 zwrocPole(nrGracza, 1, nrKolumny)->zwrocOddzial()->getLiczebnoscOddzialu_() < 1)
 
         {
+            zwrocPole(nrGracza, 1, nrKolumny)->zwrocOddzial()->getWojsko()
+                    ->usunOddzial(zwrocPole(nrGracza, 1, nrKolumny)->getOddzial());
+            poleGry_.at(nrGracza).at(1).at(nrKolumny)->ustawOddzial(nullptr);
+
             przesunSzeregi(zwrocPole(nrGracza, 1, nrKolumny));
         }
     }
@@ -220,6 +224,9 @@ void PoleBitwy::usunPoleglych2(int nrGracza) {
         if (zwrocPole(nrGracza, 1, nrKolumny)->zwrocOddzial()!= nullptr && zwrocPole(nrGracza, 1, nrKolumny)->zwrocOddzial()->getLiczebnoscOddzialu_() < 1)
 
         {
+            zwrocPole(nrGracza, 1, nrKolumny)->zwrocOddzial()->getWojsko()
+                    ->usunOddzial(zwrocPole(nrGracza, 1, nrKolumny)->getOddzial());
+            poleGry_.at(nrGracza).at(1).at(nrKolumny)->ustawOddzial(nullptr);
             przesunSzeregi(zwrocPole(nrGracza, 1, nrKolumny));
         }
 
