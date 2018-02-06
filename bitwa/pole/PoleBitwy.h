@@ -38,9 +38,13 @@ public:
     void przesunSzeregi(Pole*);
     virtual void przesunSzeregi(PolePierwszejLinii&);
     virtual void przesunSzeregi(PoleDrugiejLinii&);
-    void konsolidacja(Pole*);
+    void konsolidacja(unsigned int);
     virtual void przesunSzeregi(Oddzial&);
     virtual void przesunSzeregi(Tarczownik&);
+    void konsolidacja1(Pole*);
+    void konsolidacja2(Pole*);
+
+
 };
 
 

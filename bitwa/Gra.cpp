@@ -55,6 +55,8 @@ void Gra::rozegrajTure() {
     drugiGracz_.przeliczStraty();
     poleBitwy_.zmianaMorale();
     poleBitwy_.usunPoleglych();
+    poleBitwy_.konsolidacja(0);
+    poleBitwy_.konsolidacja(1);
     wypisz();
 
 }
