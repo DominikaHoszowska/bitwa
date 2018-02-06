@@ -270,12 +270,12 @@ void PoleBitwy::przesunSzeregi(PoleDrugiejLinii &pole) {
 
 void PoleBitwy::konsolidacja(unsigned int nrGracza) {
 
-    for(int nrKolumny=(int)(getGra()->getDlugoscLinii()/2)-1;nrKolumny>0;nrKolumny--)
+    for(int nrKolumny=((int)(getGra()->getDlugoscLinii()/2))-1;nrKolumny>0;nrKolumny--)
     {
         if(poleGry_.at(nrGracza).at(0).at(nrKolumny)->zwrocOddzial()== nullptr)
             konsolidacja1(poleGry_.at(nrGracza).at(0).at(nrKolumny));
     }
-    for(int nrKolumny=(getGra()->getDlugoscLinii()/2);nrKolumny<(int)getGra()->getDlugoscLinii()-1;nrKolumny++)
+    for(int nrKolumny=(int)(getGra()->getDlugoscLinii()/2);nrKolumny<((int)getGra()->getDlugoscLinii())-1;nrKolumny++)
     {
         if(poleGry_.at(nrGracza).at(0).at(nrKolumny)->zwrocOddzial()== nullptr)
             konsolidacja2(poleGry_.at(nrGracza).at(0).at(nrKolumny));
@@ -320,5 +320,5 @@ void PoleBitwy::konsolidacja2(Pole *pole) {
             poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->ustawOddzial(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny+1)->zwrocOddzial());
             poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny+1)->ustawOddzial(nullptr);
         }
-        konsolidacja1(poleGry_.at(nrGracza).at(0).at(nrKolumny+1));
+        konsolidacja2(poleGry_.at(nrGracza).at(0).at(nrKolumny+1));
     }}
