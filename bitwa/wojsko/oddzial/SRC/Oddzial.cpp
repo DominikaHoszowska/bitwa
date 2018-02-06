@@ -180,11 +180,7 @@ void Oddzial::przeliczStraty() {
 }
 }
 
-void Oddzial::likwidacja() {
 
-    wojsko_->likwidacjaZmianaMorale(pole_);
-    wojsko_->przesunSzeregi(pole_);
-}
 
 void Oddzial::ustawPole(Pole * pole) {
     pole_=pole;
@@ -199,10 +195,7 @@ void Oddzial::zmniejszMorale() {
     morale_-=0.25;
 }
 
-void Oddzial::przesunSzeregiT(Wojsko*) {
-//nie robimy nic, tylko jak jest Tarczownikiem
 
-}
 
 void Oddzial::przyjmijAtakW(Oddzial *oddzial) {
     oddzial->atakuj(*this);

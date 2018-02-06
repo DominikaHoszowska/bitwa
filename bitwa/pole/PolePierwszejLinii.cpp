@@ -15,9 +15,7 @@ void PolePierwszejLinii::czyMogeAtakowac(Oddzial *oddzial) {
     oddzial->atakuj(*this);
 }
 
-void PolePierwszejLinii::przesunSzeregi(Wojsko *wojsko) {
-    wojsko->przesunSzeregi(*this);
-}
+
 
 void PolePierwszejLinii::przyjmijAtak(Lucznik &lucznik, double d) {
     lucznik.przyjmijAtak(*this,d);

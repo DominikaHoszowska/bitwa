@@ -31,13 +31,7 @@ public:
     virtual Oddzial* znajdzPrzeciwnika(Oddzial&);
     virtual Oddzial* znajdzPrzeciwnika(Lucznik&);
     void likwidacjaZmianaMorale(Pole*);
-    void przesunSzeregi(Pole*);
-    virtual void przesunSzeregi(PolePierwszejLinii&);
-    virtual void przesunSzeregi(PoleDrugiejLinii&);
-    virtual void konsoldacjaSzeregow(unsigned int);
-    void zamienTarczownika(Pole*);
-    void konsoldacjaSzeregowPierwszaPolowa(unsigned int);
-    void konsoldacjaSzeregowDrugaPolowa(unsigned int);
+
 
 };
 

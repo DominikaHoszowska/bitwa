@@ -28,7 +28,6 @@ public:
 
     void wycofajWsparcie(Oddzial *oddzial) override;
 
-    void przesunSzeregiT(Wojsko*) override;
 };
 
 

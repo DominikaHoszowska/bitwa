@@ -16,7 +16,6 @@ public:
 
     void czyMogeAtakowac(Oddzial *oddzial) override;
 
-    void przesunSzeregi(Wojsko *wojsko) override;
 
     void przyjmijAtak(Lucznik& lucznik, double d) override;
 

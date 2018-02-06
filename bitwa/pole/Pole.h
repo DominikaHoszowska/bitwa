@@ -38,7 +38,7 @@ public:
     unsigned int getNrKolumny_() const;
     virtual void czyMogeAtakowac(Oddzial*);
     const void wypisz();
-    virtual void przesunSzeregi(Wojsko*);
+
     virtual void przyjmijAtak(Lucznik&, double);
     virtual void przyjmijAtak(Kusznik&, double);
 

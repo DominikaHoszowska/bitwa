@@ -170,89 +170,14 @@ void Wojsko::likwidacjaZmianaMorale(Pole *pole) {
     }
 }
 
-void Wojsko::przesunSzeregi(Pole *pole) {
-
-    auto oddzial = pole->getOddzial();
-
-    oddzialy_.remove(oddzial);
-    delete oddzial;
-
-    pole->ustawOddzial(nullptr);
-
-    pole->przesunSzeregi(this);
-}
-
-void Wojsko::przesunSzeregi(PolePierwszejLinii &pole) {
-    if (poleBitwy_->zwrocPole(pole.getNrGracza_(), 1, pole.getNrKolumny_())->zwrocOddzial() == nullptr) {
-        konsoldacjaSzeregow(pole.getNrKolumny_());
-        return;
-    }
-    poleBitwy_->zwrocPole(pole.getNrGracza_(), 1, pole.getNrKolumny_())->zwrocOddzial()->przeliczStraty();
-
-    if (poleBitwy_->zwrocPole(pole.getNrGracza_(), 1, pole.getNrKolumny_())->zwrocOddzial() == nullptr) {
-        konsoldacjaSzeregow(pole.getNrKolumny_());
-        return;
-    }
-    pole.ustawOddzial(poleBitwy_->zwrocPole(pole.getNrGracza_(), 1, pole.getNrKolumny_())->zwrocOddzial());
-    poleBitwy_->zwrocPole(pole.getNrGracza_(), 1, pole.getNrKolumny_())->ustawOddzial(nullptr);
-    poleBitwy_->zwrocPole(pole.getNrGracza_(), 1, pole.getNrKolumny_())->przesunSzeregi(this);
-
-}
-
-void Wojsko::przesunSzeregi(PoleDrugiejLinii &pole) {
-
-    if (poleBitwy_->zwrocPole(pole.getNrGracza_(), 2, pole.getNrKolumny_())->zwrocOddzial() == nullptr) {
-        return;
-    }
-    pole.ustawOddzial(poleBitwy_->zwrocPole(pole.getNrGracza_(), 2, pole.getNrKolumny_())->zwrocOddzial());
-    poleBitwy_->zwrocPole(pole.getNrGracza_(), 2, pole.getNrKolumny_())->ustawOddzial(nullptr);
-    pole.zwrocOddzial()->przesunSzeregiT(this);
-}
-
-
-void Wojsko::zamienTarczownika(Pole *pole) {
-    Oddzial *oddzial = pole->getOddzial();
-    pole->ustawOddzial(poleBitwy_->zwrocPole(pole->getNrGracza_(), 0, pole->getNrKolumny_())->zwrocOddzial());
-    poleBitwy_->zwrocPole(pole->getNrGracza_(), 0, pole->getNrKolumny_())->ustawOddzial(oddzial);
-    delete oddzial;
-}
-
-
-void Wojsko::konsoldacjaSzeregow(unsigned int nrKolumny) {
-    if (nrKolumny < poleBitwy_->getGra()->getDlugoscLinii() / 2) {
-        konsoldacjaSzeregowPierwszaPolowa(nrKolumny);
-    }
-    konsoldacjaSzeregowDrugaPolowa(nrKolumny);
-}
-
-void Wojsko::konsoldacjaSzeregowPierwszaPolowa(unsigned int nrKolumny) {
-
-    if (nrKolumny == 0) {
-        return;
-    }
-    for (unsigned int nrWiersza = 0; nrWiersza <= 2; nrWiersza++) {
-        poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny)
-                ->ustawOddzial(poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza,
-                                                     nrKolumny - 1)->zwrocOddzial());
-        poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny - 1)->ustawOddzial(nullptr);
-    }
-    konsoldacjaSzeregowDrugaPolowa(nrKolumny - 1);
-}
-
-void Wojsko::konsoldacjaSzeregowDrugaPolowa(unsigned int nrKolumny) {
-
-    if (nrKolumny != poleBitwy_->getGra()->getDlugoscLinii() / 2) {
-        for (unsigned int nrWiersza = 0; nrWiersza <= 2; nrWiersza++) {
-
-            poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny)
-                    ->ustawOddzial(poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza,
-                                                         nrKolumny+1)->zwrocOddzial());
-            poleBitwy_->zwrocPole(this->gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny)->ustawOddzial(nullptr);
-
-
-        }
-        if (nrKolumny + 1 < poleBitwy_->getGra()->getDlugoscLinii())
-            konsoldacjaSzeregowDrugaPolowa(nrKolumny + 1);
-    }
-}
-
+//void Wojsko::przesunSzeregi(Pole *pole) {
+//
+//    auto oddzial = pole->getOddzial();
+//
+//    oddzialy_.remove(oddzial);
+//    delete oddzial;
+//
+//    pole->ustawOddzial(nullptr);
+//
+//    pole->przesunSzeregi(this);
+//}

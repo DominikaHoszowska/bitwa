@@ -47,6 +47,3 @@ void Tarczownik::wycofajWsparcie(Oddzial *oddzial) {
     oddzial->wycofajWsparcie(*this);
 }
 
-void Tarczownik::przesunSzeregiT(Wojsko* wojsko) {
-    wojsko->zamienTarczownika(this->getPole());
-}

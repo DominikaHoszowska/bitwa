@@ -89,10 +89,8 @@ public:
     virtual void wycofajWsparcie(Tarczownik&);
     virtual void wycofajWsparcie(Bebniarz&);
     void przeliczStraty();
-    void likwidacja();
     void ustawPole(Pole*);
     void zmniejszMorale();
-    virtual void przesunSzeregiT(Wojsko*);
     virtual void przyjmijAtakW(Oddzial*);
 
     virtual void atakuj(Konny&);
