@@ -75,5 +75,9 @@ void Pole::przyjmijAtak(Kusznik &, double) {
 //nie robimy nic
 }
 
+void Pole::przesunSzeregi(PoleBitwy*) {
+//nic nie robimy
+}
+
 
 

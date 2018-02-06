@@ -19,6 +19,8 @@ public:
     void przyjmijAtak(Lucznik &lucznik, double d) override;
 
     void przyjmijAtak(Kusznik &kusznik, double d) override;
+
+    void przesunSzeregi(PoleBitwy *bitwy) override;
 };
 
 

@@ -41,6 +41,7 @@ public:
 
     virtual void przyjmijAtak(Lucznik&, double);
     virtual void przyjmijAtak(Kusznik&, double);
+    virtual void przesunSzeregi(PoleBitwy*);
 
 };
 

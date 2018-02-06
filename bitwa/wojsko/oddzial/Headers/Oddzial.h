@@ -96,6 +96,7 @@ public:
     virtual void atakuj(Konny&);
     virtual void atakuj(Oddzial&);
     virtual void atakuj(Zasiegowa&);
+    virtual void przesunSzeregi(PoleBitwy*);
 
 
 };

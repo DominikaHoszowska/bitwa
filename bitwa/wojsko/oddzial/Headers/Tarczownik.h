@@ -28,6 +28,7 @@ public:
 
     void wycofajWsparcie(Oddzial *oddzial) override;
 
+    void przesunSzeregi(PoleBitwy *bitwy) override;
 };
 
 

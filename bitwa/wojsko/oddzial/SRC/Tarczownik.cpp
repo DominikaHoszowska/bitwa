@@ -47,3 +47,7 @@ void Tarczownik::wycofajWsparcie(Oddzial *oddzial) {
     oddzial->wycofajWsparcie(*this);
 }
 
+void Tarczownik::przesunSzeregi(PoleBitwy *bitwy) {
+    bitwy->przesunSzeregi(*this);
+}
+

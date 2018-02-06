@@ -170,14 +170,7 @@ void Wojsko::likwidacjaZmianaMorale(Pole *pole) {
     }
 }
 
-//void Wojsko::przesunSzeregi(Pole *pole) {
-//
-//    auto oddzial = pole->getOddzial();
-//
-//    oddzialy_.remove(oddzial);
-//    delete oddzial;
-//
-//    pole->ustawOddzial(nullptr);
-//
-//    pole->przesunSzeregi(this);
-//}
+void Wojsko::usunOddzial(Oddzial* oddzial) {
+    oddzialy_.remove(oddzial);
+    delete oddzial;
+}

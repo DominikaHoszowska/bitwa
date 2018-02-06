@@ -24,3 +24,7 @@ void PolePierwszejLinii::przyjmijAtak(Lucznik &lucznik, double d) {
 void PolePierwszejLinii::przyjmijAtak(Kusznik &kusznik, double obrazenia) {
     kusznik.przyjmijAtak(*this,obrazenia);
 }
+
+void PolePierwszejLinii::przesunSzeregi(PoleBitwy* poleBitwy) {
+    poleBitwy->przesunSzeregi(*this);
+}

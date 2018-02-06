@@ -31,7 +31,7 @@ public:
     virtual Oddzial* znajdzPrzeciwnika(Oddzial&);
     virtual Oddzial* znajdzPrzeciwnika(Lucznik&);
     void likwidacjaZmianaMorale(Pole*);
-
+    void usunOddzial(Oddzial*);
 
 };
 

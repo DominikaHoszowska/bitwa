@@ -23,3 +23,7 @@ void PoleDrugiejLinii::przyjmijAtak(Lucznik &lucznik, double d) {
 void PoleDrugiejLinii::przyjmijAtak(Kusznik &kusznik, double d) {
     kusznik.przyjmijAtak(*this,d);
 }
+
+void PoleDrugiejLinii::przesunSzeregi(PoleBitwy *bitwy) {
+    bitwy->przesunSzeregi(*this);
+}

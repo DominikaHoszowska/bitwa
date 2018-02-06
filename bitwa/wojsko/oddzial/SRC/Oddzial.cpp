@@ -213,5 +213,10 @@ void Oddzial::atakuj(Zasiegowa &) {
 
 }
 
+void Oddzial::przesunSzeregi(PoleBitwy * poleBitwy) {
+    poleBitwy->przesunSzeregi(*this);
+
+}
+
 
 
