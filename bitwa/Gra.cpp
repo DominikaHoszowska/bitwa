@@ -63,7 +63,6 @@ void Gra::rozegrajTure() {
 
 void Gra::wypisz() {
     wypiszPrzerywnik();
-    wypiszPrzerywnik();
     std::cout<<"Tura "<<this->nrTury_<<" z "<<liczbaTur_<<std::endl;
     this->poleBitwy_.wypisz();
     wypiszPrzerywnik();
