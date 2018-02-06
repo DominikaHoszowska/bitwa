@@ -19,18 +19,18 @@ public:
 
     explicit PoleBitwy(unsigned int dlugoscLinii);
 
-    void ustawOddzial(uint8_t gracz, int nrWiersza, int nrKolumny, Oddzial*);
+    void ustawOddzial(int gracz, int nrWiersza, int nrKolumny, Oddzial*);
 
     virtual ~PoleBitwy() = default;
-    Pole* zwrocPole(uint8_t gracz, int nrWiersza, int nrKolumny);
+    Pole* zwrocPole(int gracz, int nrWiersza, int nrKolumny);
     virtual void wypisz();
 
     Gra* getGra() const;
 
     void setGra(Gra *gra);
-    virtual Oddzial* znajdzPrzeciwnika(Oddzial&, uint8_t);
+    virtual Oddzial* znajdzPrzeciwnika(Oddzial&, int);
 
-    virtual Oddzial* znajdzPrzeciwnika(Lucznik&, uint8_t);
+    virtual Oddzial* znajdzPrzeciwnika(Lucznik&, int);
     void zmianaMorale();
     void usunPoleglych();
     void usunPoleglych1(int);

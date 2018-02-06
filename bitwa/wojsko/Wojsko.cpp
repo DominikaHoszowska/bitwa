@@ -47,8 +47,10 @@ Wojsko::Wojsko(Gracz *gracz_, std::vector<std::vector<char>> wojsko, PoleBitwy *
                 default:
                     throw std::invalid_argument("Nieprawidlowy znak na planszy");
             }
-            oddzial->setWojsko(this);
-            oddzialy_.push_back(oddzial);
+            if(oddzial!= nullptr) {
+                oddzial->setWojsko(this);
+                oddzialy_.push_back(oddzial);
+            }
             poleBitwy_->ustawOddzial(gracz_->zwrocIdentyfikator(), nrWiersza, nrKolumny, oddzial);
 
         }

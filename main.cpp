@@ -20,7 +20,7 @@ bool sprawdzMaksymalnaLiczbeTur(int liczbaTur)
     return false;
 }
 int main() {
-    int dlugoscLinii=2;
+    int dlugoscLinii=6;
     int liczbaTur=100;
 
 //    std::cout << "Wprowadz dlugosc linii" << std::endl;
@@ -40,7 +40,9 @@ int main() {
 //    }
 
     /*Wczytanie wojsk*/
-    std::vector<std::vector<std::vector<char>>> tabPole /*(6)*/ = {{{'B', 'T'},{'k', 'k'},{'M', 'L'}},{{'L', 'L'},{'L', 'L'},{'L', 'L'}}};
+    std::vector<std::vector<std::vector<char>>> tabPole /*(6)*/ =
+            {{{'K', 'T','T','T','T','K'},{'L', 'L','B','B','L','L'},{'K', 'H','M', 'M','H', 'K'}},
+             {{'H', 'M','K', 'K','M', 'H'},{'L', 'B','k', 'k','M', 'H'},{'T', 'T','T', 'T','T', 'X'}}};
 //    char znak;
 //    std::cout<<"Wprowadz wojska";
 //  for(int nrWiersza=2;nrWiersza>=0;nrWiersza--)
@@ -63,4 +65,6 @@ int main() {
     {
         gra.rozegrajTure();
     }
+    char a;
+    std::cin>>a;
 }

@@ -22,7 +22,7 @@ private:
 public:
 
     explicit Pole() = default;
-    void ustawWspolrzedne(uint8_t ,unsigned int,unsigned int);
+    void ustawWspolrzedne(int ,unsigned int,unsigned int);
 
      Oddzial* getOddzial() ;
     Oddzial* zwrocOddzial();

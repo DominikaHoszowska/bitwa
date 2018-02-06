@@ -17,7 +17,7 @@ void Pole::usunOddzial() {
     delete oddzial_;
 }
 
-void Pole::ustawWspolrzedne(uint8_t nrGracza, unsigned int nrWiersza, unsigned int nrKolumny) {
+void Pole::ustawWspolrzedne(int nrGracza, unsigned int nrWiersza, unsigned int nrKolumny) {
     nrGracza_=nrGracza;
     nrWiersza_=nrWiersza;
     nrKolumny_=nrKolumny;
